@@ -88,19 +88,40 @@ h3 {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .55rem;
     padding: .9rem 1.6rem;
     border-radius: 99px;
     font-weight: 700;
     border: 2px solid transparent;
     cursor: pointer;
-    font: inherit;
-    font-weight: 700;
-    transition: transform .25s, background .25s
+
+    transition: transform .25s, background .25s;
+    vertical-align: middle;
+    text-decoration: none
 }
 
 .btn:hover {
     transform: translateY(-2px)
+}
+
+.btn i.fa-arrow-right,
+.btn .fa-arrow-right,
+button i.fa-arrow-right,
+.dr-link i.fa-arrow-right,
+.dr-book i.fa-arrow-right,
+.bl-more i.fa-arrow-right {
+    margin-left: .45rem;
+    transition: transform .25s ease
+}
+
+.btn:hover i.fa-arrow-right,
+.btn:hover .fa-arrow-right,
+.dr-link:hover i.fa-arrow-right,
+.dr-book:hover i.fa-arrow-right {
+    transform: translateX(3px)
 }
 
 .btn-teal {
