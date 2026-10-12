@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patient dashboard | Stackly Clinic</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="d-body" data-role="patient">
+  <div class="d-app">
+    <aside class="d-side" id="side" aria-label="Dashboard menu">
+      <a href="patient-dashboard.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+      <span class="d-role"><i class="fas fa-user"></i> Patient portal</span>
+      <p class="d-side-mail" title="Signed in as"><i class="fas fa-envelope" aria-hidden="true"></i><span id="sideMail">Guest preview</span></p>
+      <nav aria-label="Dashboard sections">
+        <ul class="d-menu">
+          <li><button type="button" class="d-link active" data-view="overview"><i
+                class="fas fa-table-columns"></i>Overview</button></li>
+          <li><button type="button" class="d-link" data-view="appointments"><i
+                class="fas fa-calendar-check"></i>Appointments</button></li>
+          <li><button type="button" class="d-link" data-view="records"><i
+                class="fas fa-file-medical"></i>Records</button></li>
+          <li><button type="button" class="d-link" data-view="profile"><i class="fas fa-id-card"></i>Profile</button>
+          </li>
+        </ul>
+      </nav>
+      <div class="d-side-foot">
+        <a class="d-link" href="index.html"><i class="fas fa-house"></i>Back to Home</a>
+        <a class="d-link out" href="login.html"><i class="fas fa-right-from-bracket"></i>Logout</a>
+      </div>
+    </aside>
+    <div class="d-scrim" id="scrim"></div>
+
+    <div class="d-main">
+      <header class="d-top">
+        <button type="button" class="d-burger" id="dBurger" aria-label="Open menu" aria-expanded="false"
+          aria-controls="side"><i class="fas fa-bars"></i></button>
+        <p class="d-crumb" id="crumb">Overview</p>
+        <a href="404.html" class="d-bell" aria-label="Notifications"><i class="fas fa-bell"></i><span></span></a>
+        <div class="d-chip" title="Signed in as"><span class="d-av" id="av">G</span><span class="d-mail" id="mail">Guest
+            preview</span></div>
+      </header>
+
+      <main class="d-content">
+        <div class="d-view" id="v-overview">
+          <div class="d-vhead">
+            <div>
+              <h1 class="d-h1">Overview</h1>
+              <p class="d-sub">Your health at a glance.</p>
+            </div>
+            <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html"><i class="fas fa-plus"></i>&nbsp; Book
+                appointment</a></div>
+          </div>
+          <div class="d-split">
+            <div class="d-grid">
+              <section class="d-card d-hero c12" aria-label="Next appointment">
+                <div class="d-hero-in">
+                  <div>
+                    <p>Welcome back, <b data-name>there</b></p>
+                    <h2 class="d-big">Your next visit is Wed, 14 Oct.</h2>
+                    <p>10:30 am with Dr. Ananya Rao, General medicine, Room 204.</p>
+                    <div class="d-acts"><a class="btn btn-light btn-sm" href="404.html">Reschedule</a><a
+                        class="btn btn-line btn-sm" href="404.html">Get directions</a></div>
+                  </div>
+                  <div class="d-glass"><b>Before you come</b>
+                    <ul>
+                      <li><i class="fas fa-clock"></i>&nbsp; Arrive by 10:20 am</li>
+                      <li><i class="fas fa-file-medical"></i>&nbsp; Bring your last two reports</li>
+                      <li><i class="fas fa-droplet"></i>&nbsp; Fasting is not needed</li>
+                    </ul>
+                  </div>
+                </div><svg class="d-hero-ecg" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M0 40 H300 L330 40 345 10 365 70 385 25 400 40 H650 L675 40 690 5 712 75 732 30 748 40 H1200"
+                    fill="none" stroke="#6fd6d3" stroke-width="3" />
+                </svg>
+              </section>
+              <section class="d-card c7" aria-label="Latest vitals">
+                <div class="d-ch">
+                  <h2 class="d-h2">Latest vitals</h2><a class="btn btn-ghost btn-sm" href="404.html">Full history</a>
+                </div>
+                <div class="d-kpis">
+                  <div class="kpi"><b>118/76</b><span>Blood pressure, mmHg</span></div>
+                  <div class="kpi"><b data-count="72">72</b><span>Heart rate, bpm</span><svg viewBox="0 0 120 28"
+                      preserveAspectRatio="none" aria-hidden="true">
+                      <path class="draw"
+                        d="M0 14 H28 L34 14 38 3 44 25 50 8 54 14 H78 L84 14 88 3 94 25 100 8 104 14 H120" fill="none"
+                        stroke="#1FA2A6" stroke-width="2.2" stroke-linejoin="round" />
+                    </svg></div>
+                  <div class="kpi"><b data-count="98" data-suffix="%">98%</b><span>Oxygen level</span></div>
+                  <div class="kpi"><b data-count="68" data-suffix=" kg">68 kg</b><span>Weight</span></div>
+                </div>
+              </section>
+              <section class="d-card c5" aria-label="Reminders">
+                <div class="d-ch">
+                  <h2 class="d-h2">Reminders</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-pills"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Take Vitamin D3</h3>
+                      <p class="d-sub">Weekly, every Sunday</p>
+                    </div>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-flask"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Lipid profile due</h3>
+                      <p class="d-sub">Fasting test, 8 Oct</p>
+                    </div><span class="pill warn">Due</span>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-syringe"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Flu vaccine</h3>
+                      <p class="d-sub">Available this month</p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <aside class="d-rail" aria-label="More on your overview">
+              <section class="d-card" aria-label="Health goals">
+                <div class="d-ch">
+                  <h2 class="d-h2">Health goals</h2><span class="pill ok">On track</span>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Daily steps</span><span>6,400 / 8,000</span></div>
+                  <div class="meter"><i style="--w:80%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Water intake</span><span>6 / 8 glasses</span></div>
+                  <div class="meter"><i style="--w:75%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Sleep this week</span><span>7.1 h avg</span></div>
+                  <div class="meter"><i style="--w:89%"></i></div>
+                </div>
+              </section>
+              <section class="d-card" aria-label="Quick actions">
+                <div class="d-ch">
+                  <h2 class="d-h2">Quick actions</h2>
+                </div>
+                <div class="d-tiles"><a class="d-tile" href="404.html"><i class="fas fa-comment-medical"></i>Message
+                    doctor</a><a class="d-tile" href="404.html"><i class="fas fa-file-arrow-down"></i>Latest
+                    report</a><a class="d-tile" href="404.html"><i class="fas fa-receipt"></i>Pay invoice</a><a
+                    class="d-tile" href="404.html"><i class="fas fa-prescription-bottle-medical"></i>Request refill</a>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </div>
+        <div class="d-view" id="v-appointments" hidden>
+          <div class="d-vhead">
+            <div>
+              <h1 class="d-h1">Appointments</h1>
+              <p class="d-sub">Manage upcoming and past visits.</p>
+            </div>
+            <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html"><i class="fas fa-plus"></i>&nbsp; Book
+                new</a></div>
+          </div>
+          <div class="d-split">
+            <div class="d-grid">
+              <section class="d-card c7" aria-label="Upcoming">
+                <div class="d-ch">
+                  <h2 class="d-h2">Upcoming</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row">
+                    <div class="d-date"><b>14</b><small>Oct</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Ananya Rao</h3>
+                      <p class="d-sub">General medicine, 10:30 am</p>
+                    </div><span class="pill ok">Confirmed</span><a class="btn btn-ghost btn-sm"
+                      href="404.html">Reschedule</a>
+                  </li>
+                  <li class="d-row">
+                    <div class="d-date"><b>21</b><small>Oct</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Karthik Iyer</h3>
+                      <p class="d-sub">ECG and echo, 4:00 pm</p>
+                    </div><span class="pill ok">Confirmed</span><a class="btn btn-ghost btn-sm"
+                      href="404.html">Reschedule</a>
+                  </li>
+                  <li class="d-row">
+                    <div class="d-date"><b>2</b><small>Nov</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Physiotherapy session</h3>
+                      <p class="d-sub">Back pain, 11:15 am</p>
+                    </div><span class="pill warn">Pending</span><a class="btn btn-ghost btn-sm"
+                      href="404.html">Reschedule</a>
+                  </li>
+                </ul>
+              </section>
+              <section class="d-card c5" aria-label="Book a new visit">
+                <div class="d-ch">
+                  <h2 class="d-h2">Book a new visit</h2>
+                </div>
+                <p class="d-label">Choose a service</p>
+                <div class="chips"><a class="chip" href="404.html">General medicine</a><a class="chip"
+                    href="404.html">Cardiology</a><a class="chip" href="404.html">Lab tests</a><a class="chip"
+                    href="404.html">Physiotherapy</a></div>
+                <p class="d-label">Earliest slots this week</p>
+                <div class="chips"><a class="chip" href="404.html">Thu 9:30 am</a><a class="chip" href="404.html">Thu
+                    5:00 pm</a><a class="chip" href="404.html">Fri 11:00 am</a><a class="chip" href="404.html">Sat 8:30
+                    am</a></div>
+                <div class="d-acts" style="margin-top:1.2rem"><a class="btn btn-teal btn-sm" href="404.html">See all
+                    slots</a></div>
+              </section>
+              <section class="d-card c12" aria-label="Past visits">
+                <div class="d-ch">
+                  <h2 class="d-h2">Past visits</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row">
+                    <div class="d-date"><b>23</b><small>Sep</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Ananya Rao</h3>
+                      <p class="d-sub">Fever and general check-up</p>
+                    </div><span class="pill ok">Completed</span><a class="btn btn-ghost btn-sm" href="404.html">View
+                      summary</a>
+                  </li>
+                  <li class="d-row">
+                    <div class="d-date"><b>5</b><small>Sep</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Diagnostics lab</h3>
+                      <p class="d-sub">Blood work, full panel</p>
+                    </div><span class="pill ok">Completed</span><a class="btn btn-ghost btn-sm" href="404.html">View
+                      summary</a>
+                  </li>
+                  <li class="d-row">
+                    <div class="d-date"><b>12</b><small>Aug</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Karthik Iyer</h3>
+                      <p class="d-sub">Cardiology consultation</p>
+                    </div><span class="pill ok">Completed</span><a class="btn btn-ghost btn-sm" href="404.html">View
+                      summary</a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <aside class="d-rail" aria-label="More on your appointments">
+              <section class="d-card" aria-label="Visit calendar">
+                <div class="d-ch">
+                  <h2 class="d-h2">October 2026</h2>
+                </div>
+                <div class="d-cal" role="img" aria-label="October 2026 calendar, visits on 14 and 21 October">
+                  <b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b><b>S</b><span aria-hidden="true"></span><span
+                    aria-hidden="true"></span><span aria-hidden="true"></span><span class="">1</span><span
+                    class="">2</span><span class="">3</span><span class="">4</span><span class="">5</span><span
+                    class="">6</span><span class="">7</span><span class="">8</span><span class="today">9</span><span
+                    class="">10</span><span class="">11</span><span class="">12</span><span class="">13</span><span
+                    class="appt">14</span><span class="">15</span><span class="">16</span><span class="">17</span><span
+                    class="">18</span><span class="">19</span><span class="">20</span><span class="appt">21</span><span
+                    class="">22</span><span class="">23</span><span class="">24</span><span class="">25</span><span
+                    class="">26</span><span class="">27</span><span class="">28</span><span class="">29</span><span
+                    class="">30</span><span class="">31</span></div>
+                <p class="d-legend"><i class="now"></i>Today<i class="appt"></i>Your visit</p>
+              </section>
+              <section class="d-card" aria-label="Visit checklist">
+                <div class="d-ch">
+                  <h2 class="d-h2">Visit checklist</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-id-card"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Photo ID and insurance card</h3>
+                      <p class="d-sub">Needed at the front desk</p>
+                    </div>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-clock"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Arrive 10 minutes early</h3>
+                      <p class="d-sub">Time for quick check-in</p>
+                    </div>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-file-medical"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Bring recent reports</h3>
+                      <p class="d-sub">Your last two lab results</p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </div>
+        <div class="d-view" id="v-records" hidden>
+          <div class="d-vhead">
+            <div>
+              <h1 class="d-h1">Medical records</h1>
+              <p class="d-sub">Reports, prescriptions and history in one place.</p>
+            </div>
+            <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html"><i class="fas fa-upload"></i>&nbsp;
+                Upload a report</a></div>
+          </div>
+          <div class="d-split">
+            <div class="d-grid">
+              <section class="d-card c7" aria-label="Lab reports">
+                <div class="d-ch">
+                  <h2 class="d-h2">Lab reports</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-vial"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Complete blood count</h3>
+                      <p class="d-sub">23 Sep 2026</p>
+                    </div><span class="pill ok">Normal</span><a class="btn btn-ghost btn-sm"
+                      href="404.html">Download</a>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-vial"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Lipid profile</h3>
+                      <p class="d-sub">23 Sep 2026</p>
+                    </div><span class="pill warn">Review</span><a class="btn btn-ghost btn-sm"
+                      href="404.html">Download</a>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-vial"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">HbA1c</h3>
+                      <p class="d-sub">5 Sep 2026</p>
+                    </div><span class="pill ok">Normal</span><a class="btn btn-ghost btn-sm"
+                      href="404.html">Download</a>
+                  </li>
+                </ul>
+              </section>
+              <section class="d-card c5" aria-label="Active prescriptions">
+                <div class="d-ch">
+                  <h2 class="d-h2">Active prescriptions</h2>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Vitamin D3, weekly</span><span>5 of 8 weeks left</span></div>
+                  <div class="meter"><i style="--w:62%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Iron supplement, daily</span><span>12 days left</span></div>
+                  <div class="meter"><i style="--w:40%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Pantoprazole 40 mg</span><span>4 days left</span></div>
+                  <div class="meter"><i style="--w:14%"></i></div>
+                </div>
+                <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html">Request refill</a></div>
+              </section>
+              <section class="d-card c12" aria-label="Allergies and vaccinations">
+                <div class="d-ch">
+                  <h2 class="d-h2">Allergies and vaccinations</h2>
+                </div>
+                <div class="d-cols">
+                  <div>
+                    <p class="d-label">Allergies</p>
+                    <div class="chips"><span class="chip tag">Penicillin</span><span class="chip tag">Peanuts</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="d-label">Vaccinations</p>
+                    <ul class="d-list">
+                      <li class="d-row"><span class="d-ico"><i class="fas fa-syringe"></i></span>
+                        <div class="grow">
+                          <h3 class="d-h3">Tetanus booster</h3>
+                          <p class="d-sub">Mar 2025</p>
+                        </div><span class="pill ok">Up to date</span>
+                      </li>
+                      <li class="d-row"><span class="d-ico"><i class="fas fa-syringe"></i></span>
+                        <div class="grow">
+                          <h3 class="d-h3">Hepatitis B</h3>
+                          <p class="d-sub">Jan 2024</p>
+                        </div><span class="pill ok">Up to date</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <aside class="d-rail" aria-label="More on your records">
+              <section class="d-card" aria-label="Records summary">
+                <div class="d-ch">
+                  <h2 class="d-h2">Records summary</h2>
+                </div>
+                <div class="d-kpis">
+                  <div class="kpi"><b data-count="14">14</b><span>Reports on file</span></div>
+                  <div class="kpi"><b data-count="1">1</b><span>Needs review</span></div>
+                  <div class="kpi"><b data-count="3">3</b><span>Active prescriptions</span></div>
+                  <div class="kpi"><b data-count="2">2</b><span>Allergies listed</span></div>
+                </div>
+              </section>
+              <section class="d-card" aria-label="Upload and share">
+                <div class="d-ch">
+                  <h2 class="d-h2">Upload and share</h2>
+                </div>
+                <div class="d-drop"><i class="fas fa-cloud-arrow-up" aria-hidden="true"></i><b>Add a report</b><span
+                    class="d-sub">PDF or JPG, up to 10 MB</span><a class="btn btn-teal btn-sm" href="404.html">Choose
+                    file</a></div>
+                <p class="d-sub" style="margin-top:.9rem">Records are shared only with your care team.</p>
+                <div class="d-acts"><a class="btn btn-ghost btn-sm" href="404.html">Share with a doctor</a></div>
+              </section>
+            </aside>
+          </div>
+        </div>
+        <div class="d-view" id="v-profile" hidden>
+          <div class="d-vhead">
+            <div>
+              <h1 class="d-h1">Profile</h1>
+              <p class="d-sub">Your details, cover and care team.</p>
+            </div>
+            <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html"><i class="fas fa-pen"></i>&nbsp; Edit
+                profile</a></div>
+          </div>
+          <div class="d-split">
+            <div class="d-grid">
+              <section class="d-card c7" aria-label="Personal details">
+                <div class="d-ch">
+                  <h2 class="d-h2">Personal details</h2>
+                </div>
+                <dl class="d-dl">
+                  <dt>Name</dt>
+                  <dd data-name>there</dd>
+                  <dt>Email</dt>
+                  <dd data-mail>Not signed in</dd>
+                  <dt>Phone</dt>
+                  <dd>+91 98765 43210</dd>
+                  <dt>Date of birth</dt>
+                  <dd>14 Mar 1991</dd>
+                  <dt>Blood group</dt>
+                  <dd>O positive</dd>
+                  <dt>Address</dt>
+                  <dd>Salem</dd>
+                </dl>
+              </section>
+              <section class="d-card c5" aria-label="Insurance and billing">
+                <div class="d-ch">
+                  <h2 class="d-h2">Insurance and billing</h2>
+                </div>
+                <p class="d-label">Star Health Family Floater</p>
+                <p class="d-sub">Policy ending 4821</p>
+                <div style="margin:1rem 0">
+                  <div class="m-row">
+                    <div class="m-top"><span>Cover used</span><span>₹90,000 of ₹5,00,000</span></div>
+                    <div class="meter"><i style="--w:18%"></i></div>
+                  </div>
+                </div>
+                <p><span class="pill ok">No dues</span></p>
+                <div class="d-acts" style="margin-top:1rem"><a class="btn btn-ghost btn-sm" href="404.html">View
+                    invoices</a></div>
+              </section>
+              <section class="d-card c12" aria-label="Your care team">
+                <div class="d-ch">
+                  <h2 class="d-h2">Your care team</h2>
+                </div>
+                <div class="d-people">
+                  <div class="d-person"><img class="d-ph"
+                      src="assets/images/doctor-1.webp"
+                      alt="Dr. Ananya Rao">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Ananya Rao</h3>
+                      <p class="d-sub">Internal medicine</p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Message</a>
+                  </div>
+                  <div class="d-person"><img class="d-ph"
+                      src="assets/images/doctor-2.webp"
+                      alt="Dr. Karthik Iyer">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Karthik Iyer</h3>
+                      <p class="d-sub">Cardiologist</p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Message</a>
+                  </div>
+                  <div class="d-person"><img class="d-ph"
+                      src="assets/images/doctor-3.webp"
+                      alt="Dr. Vikram Nair">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Vikram Nair</h3>
+                      <p class="d-sub">Paediatrics</p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Message</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <aside class="d-rail" aria-label="More on your profile">
+              <section class="d-card" aria-label="Profile completeness">
+                <div class="d-ch">
+                  <h2 class="d-h2">Profile completeness</h2>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Profile completed</span><span>85%</span></div>
+                  <div class="meter"><i style="--w:85%"></i></div>
+                </div>
+                <ul class="d-list" style="margin-top:1.1rem">
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-phone"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Phone verified</h3>
+                      <p class="d-sub">Reminders by SMS</p>
+                    </div><span class="pill ok">Done</span>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-shield-heart"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Insurance added</h3>
+                      <p class="d-sub">Star Health policy</p>
+                    </div><span class="pill ok">Done</span>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-camera"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Profile photo</h3>
+                      <p class="d-sub">Helps staff recognise you</p>
+                    </div><span class="pill warn">Add</span>
+                  </li>
+                </ul>
+              </section>
+              <section class="d-card" aria-label="Contact and preferences">
+                <div class="d-ch">
+                  <h2 class="d-h2">Contact and preferences</h2>
+                </div>
+                <dl class="d-dl">
+                  <dt>Emergency contact</dt>
+                  <dd>Ravi Kumar, brother</dd>
+                  <dt>Reminders</dt>
+                  <dd>SMS and email</dd>
+                  <dt>Language</dt>
+                  <dd>English</dd>
+                  <dt>Preferred slot</dt>
+                  <dd>Mornings</dd>
+                </dl>
+                <div class="d-acts"><a class="btn btn-ghost btn-sm" href="404.html">Update preferences</a></div>
+              </section>
+            </aside>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

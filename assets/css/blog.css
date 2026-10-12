@@ -1,0 +1,1333 @@
+/* Blog page. Loads after style.css; every selector is new (bl-, crumbs) so other pages are unaffected. */
+
+.sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap
+}
+
+.crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1.4rem;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--navy)
+}
+
+.crumbs a {
+    color: var(--teal)
+}
+
+.crumbs a:hover {
+    text-decoration: underline
+}
+
+.crumbs [aria-hidden] {
+    opacity: .4
+}
+
+.btn-light {
+    background: #fff;
+    color: var(--navy)
+}
+
+.btn-light:hover {
+    background: var(--mint)
+}
+
+.btn-ghost-light {
+    border-color: #fff;
+    color: #fff
+}
+
+.btn-ghost-light:hover {
+    background: #fff;
+    color: var(--navy)
+}
+
+.bl-tag {
+    display: inline-block;
+    padding: .3rem .85rem;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, .95);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: .8rem
+}
+
+/* ---------- 1. Hero: photo with a floating read card (mirrors the contact hero) ---------- */
+.bl-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 3rem;
+    align-items: center;
+    min-height: 88svh;
+    padding: 9rem var(--pad) 5rem;
+    background:
+        radial-gradient(70% 80% at 88% 14%, rgba(31, 162, 166, .18), transparent 62%),
+        radial-gradient(55% 60% at 2% 100%, rgba(15, 76, 92, .07), transparent 70%),
+        linear-gradient(120deg, #fff 40%, var(--mint));
+    overflow: hidden
+}
+
+.bl-hero-text {
+    position: relative;
+    z-index: 1;
+    min-width: 0
+}
+
+.bl-hero h1 {
+    max-width: 16ch;
+    text-wrap: balance;
+    overflow-wrap: anywhere
+}
+
+.bl-hero h1 .mark {
+    /* color: var(--teal);
+    background: linear-gradient(transparent 60%, rgba(111, 214, 211, .5) 60%); */
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone
+}
+
+.bl-hero .lead {
+    max-width: 44ch;
+    margin: 1.4rem 0 1.8rem
+}
+
+.bl-hero .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem
+}
+
+.bl-hero .hero-actions .btn i {
+    margin-right: .35rem
+}
+
+/* small section tag above the headline */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: .9rem;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--teal)
+}
+
+.eyebrow::before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor
+}
+
+.dark .eyebrow {
+    color: #7fe0e0
+}
+
+/* trust strip under the CTAs */
+.trust {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 1.4rem;
+    margin-top: 2rem;
+    padding-top: 1.6rem;
+    border-top: 2px dashed #b7d8d6;
+}
+
+.trust li {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    flex: 0 1 auto;
+    min-width: 0
+}
+
+.trust i {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(31, 162, 166, .12);
+    color: var(--teal);
+    font-size: .95rem
+}
+
+.trust b {
+    font: 600 1rem var(--serif);
+    color: var(--navy);
+    line-height: 1.25
+}
+
+.bl-hero-media {
+    position: relative;
+    z-index: 1;
+    justify-self: center;
+    width: min(100%, 460px)
+}
+
+.bl-hero-media .arch {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 5/5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(10, 42, 67, .2)
+}
+
+/* dashed frame offset behind the photo */
+.b-ring {
+    position: absolute;
+    z-index: 0;
+    inset: -1.5rem -1.5rem 3.5rem 2rem;
+    border: 2px dashed rgba(31, 162, 166, .45);
+    border-radius: 20px
+}
+
+.bl-hero .float-card {
+    z-index: 2;
+    left: -5.5rem;
+    bottom: -2.5rem;
+}
+
+/* featured article floating over the photo */
+.float-card.b-feature {
+    width: min(76%, 300px);
+    gap: .45rem;
+    transition: transform .25s, box-shadow .25s
+}
+
+.float-card.b-feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 50px rgba(10, 42, 67, .24)
+}
+
+.float-card.b-feature:focus-visible {
+    outline: 3px solid var(--navy);
+    outline-offset: 4px
+}
+
+.float-card.b-feature .bl-tag {
+    justify-self: start;
+    background: var(--mint);
+    font-size: .78rem;
+    padding: .25rem .7rem
+}
+
+.float-card.b-feature strong {
+    font: 600 1.4rem var(--serif);
+    color: var(--ink);
+    text-wrap: balance
+}
+
+.float-card.b-feature small {
+    font-size: .8rem;
+    color: #4b6b77
+}
+
+.float-chip {
+    position: absolute;
+    z-index: 2;
+    top: 2.5rem;
+    right: -1.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: #fff;
+    color: var(--navy);
+    font-size: .85rem;
+    font-weight: 700;
+    padding: .55rem 1.05rem;
+    border-radius: 99px;
+    box-shadow: 0 15px 40px rgba(10, 42, 67, .18)
+}
+
+.float-chip i {
+    color: var(--teal)
+}
+
+/* Hero: large screens */
+@media(min-width:1400px) {
+    .bl-hero-media {
+        width: min(100%, 500px)
+    }
+
+    .float-card.b-feature strong {
+        font-size: 1.15rem
+    }
+
+    .float-chip {
+        right: -1.75rem
+    }
+}
+
+/* Hero: small laptops, text column gets narrower */
+@media(max-width:1100px) {
+    .bl-hero {
+        gap: 2.5rem
+    }
+
+    .bl-hero-media {
+        width: min(100%, 400px)
+    }
+
+    .float-chip {
+        right: -.75rem
+    }
+
+    .float-card.b-feature {
+        width: min(80%, 270px);
+        padding: .9rem 1.1rem
+    }
+
+    .float-card.b-feature strong {
+        font-size: 1rem
+    }
+}
+
+/* Trust strip: stacked rows wherever 3 columns get cramped (parity with the contact hero) */
+@media(min-width:961px) and (max-width:1100px),
+       (max-width:700px) {
+    .bl-hero .trust {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin-top: 1.7rem;
+        padding-top: 1.3rem
+    }
+
+    .bl-hero .trust li {
+        padding: .7rem 0
+    }
+
+    .bl-hero .trust li:first-child {
+        padding-top: 0
+    }
+
+    .bl-hero .trust li:last-child {
+        padding-bottom: 0
+    }
+
+    .bl-hero .trust li+li {
+        border-top: 1px solid rgba(15, 76, 92, .12)
+    }
+}
+
+/* Hero: tablet, single column, text centred like the contact hero */
+@media(max-width:960px) {
+    .bl-hero {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding-top: 7rem;
+        min-height: 0
+    }
+
+    .bl-hero-text {
+        text-align: center
+    }
+
+    .bl-hero .crumbs {
+        justify-content: center
+    }
+
+    .bl-hero .eyebrow {
+        justify-content: center
+    }
+
+    .bl-hero .eyebrow::after {
+        content: "";
+        width: 28px;
+        height: 2px;
+        border-radius: 2px;
+        background: currentColor
+    }
+
+    .bl-hero h1 {
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .bl-hero .lead {
+        max-width: 34rem;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .bl-hero .hero-actions {
+        justify-content: center
+    }
+
+    .bl-hero .trust {
+        max-width: 40rem;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .bl-hero .trust li {
+        justify-content: center
+    }
+
+    .bl-hero-media {
+        width: min(100%, 440px)
+    }
+
+    .b-ring {
+        inset: -1rem -1rem 3rem 1.25rem
+    }
+
+    .bl-hero .float-card {
+        left: -.75rem;
+        bottom: 2rem
+    }
+
+    .float-chip {
+        top: 1.5rem;
+        right: 0
+    }
+}
+
+/* Hero: phones, everything tightens and the floats stay on screen */
+@media(max-width:640px) {
+    .bl-hero {
+        gap: 2.2rem;
+        padding-top: 6.75rem;
+        padding-bottom: 3.5rem
+    }
+
+    .bl-hero .lead {
+        max-width: none;
+        margin: 1rem auto 1.5rem
+    }
+
+    .bl-hero-media {
+        width: min(100%, 380px)
+    }
+
+    .b-ring {
+        inset: -.75rem -.75rem 2.75rem .75rem
+    }
+
+    .bl-hero .float-card {
+        left: -.5rem;
+        bottom: 1.5rem;
+        padding: .8rem 1.1rem
+    }
+
+    .float-card.b-feature strong {
+        font-size: 1rem
+    }
+
+    .float-chip {
+        top: 1rem;
+        right: -.5rem;
+        font-size: .8rem;
+        padding: .45rem .85rem
+    }
+}
+
+@media(max-width:520px) {
+    .eyebrow {
+        font-size: .72rem;
+        letter-spacing: .1em;
+        margin-bottom: .7rem
+    }
+
+    .eyebrow::before {
+        width: 20px
+    }
+
+    .bl-hero .hero-actions .btn {
+        flex: 1 1 100%;
+        justify-content: center;
+        text-align: center
+    }
+
+    .float-card.b-feature {
+        width: min(84%, 250px)
+    }
+
+    .float-card.b-feature strong {
+        font-size: .98rem
+    }
+}
+
+@media(max-width:360px) {
+    .bl-hero {
+        padding-top: 6.25rem;
+        gap: 2rem
+    }
+
+    .bl-hero-media {
+        width: min(100%, 300px)
+    }
+
+    .bl-hero .float-card {
+        left: -.25rem
+    }
+
+    .float-chip {
+        top: .75rem;
+        right: 0
+    }
+
+    .float-card.b-feature strong {
+        font-size: .92rem
+    }
+}
+
+/* ---------- shared parallax frame ---------- */
+.bl-par {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate
+}
+
+.bl-par>img {
+    position: absolute;
+    left: 0;
+    top: -9%;
+    width: 100%;
+    height: 118%
+}
+
+/* ---------- 2. Featured ---------- */
+.bl-feat {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 4rem;
+    align-items: center
+}
+
+.bl-feat-img {
+    justify-self: center;
+    width: min(100%, 440px);
+    aspect-ratio: 4/5;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(10, 42, 67, .2)
+}
+
+.bl-feat-img .bl-tag {
+    position: absolute;
+    left: 50%;
+    bottom: 1.2rem;
+    z-index: 1;
+    translate: -50% 0
+}
+
+.bl-feat-text .lead {
+    max-width: none
+}
+
+.bl-author {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-bottom: 2rem
+}
+
+.bl-avatar {
+    flex: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.bl-author b {
+    display: block
+}
+
+.bl-author small {
+    color: #4b6b77
+}
+
+/* ---------- 3. Grid + tools ---------- */
+.bl-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem
+}
+
+.bl-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem
+}
+
+.bl-filters button {
+    padding: .5rem 1.1rem;
+    border-radius: 99px;
+    border: 1.5px solid #bcd3d6;
+    background: #fff;
+    color: var(--navy);
+    font: 700 .9rem var(--sans);
+    cursor: pointer;
+    transition: background .25s, color .25s, border-color .25s
+}
+
+.bl-filters button:hover {
+    border-color: var(--teal)
+}
+
+.bl-filters button.on {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: #fff
+}
+
+.bl-sort {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--navy)
+}
+
+.bl-sort select {
+    appearance: none;
+    -webkit-appearance: none;
+    min-width: 200px;
+    padding: .55rem 2.6rem .55rem 1.1rem;
+    border-radius: 99px;
+    border: 1.5px solid #bcd3d6;
+    background: #fff;
+    color: var(--navy);
+    font: 700 .9rem var(--sans);
+    cursor: pointer;
+    transition: border-color .25s
+}
+
+.bl-sort select:hover {
+    border-color: var(--teal)
+}
+
+.bl-sort select:focus-visible {
+    outline: 3px solid var(--teal);
+    outline-offset: 2px
+}
+
+.bl-sort i {
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    translate: 0 -50%;
+    color: var(--teal);
+    font-size: .75rem;
+    pointer-events: none
+}
+
+.bl-count {
+    margin: 1.5rem 0 1rem;
+    font-weight: 700;
+    color: var(--teal)
+}
+
+.bl-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem
+}
+
+.bl-card[hidden] {
+    display: none
+}
+
+.bl-card-in {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(10, 42, 67, .07);
+    transition: box-shadow .4s
+}
+
+.bl-card-in:hover,
+.bl-card-in:focus-visible {
+    box-shadow: 0 25px 50px rgba(10, 42, 67, .16)
+}
+
+.bl-card-img {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden
+}
+
+.bl-card-img img {
+    transition: transform .7s
+}
+
+.bl-card-in:hover .bl-card-img img {
+    transform: scale(1.07)
+}
+
+.bl-card-img .bl-tag {
+    position: absolute;
+    left: 1rem;
+    top: 1rem
+}
+
+.bl-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: .5rem;
+    padding: 1.4rem 1.4rem .8rem
+}
+
+.bl-card-body h3 {
+    font-size: 1.2rem
+}
+
+.bl-by {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .3rem 1rem;
+    margin-top: auto;
+    padding-top: .6rem;
+    font-size: .85rem;
+    color: #4b6b77
+}
+
+.bl-more {
+    padding: 0 1.4rem 1.4rem;
+    font-weight: 700;
+    color: var(--teal)
+}
+
+.bl-more i {
+    display: inline-block;
+    margin-left: .3rem;
+    transition: transform .35s
+}
+
+.bl-card-in:hover .bl-more i {
+    transform: translateX(6px)
+}
+
+.bl-empty {
+    padding: 3rem 0;
+    text-align: center;
+    font-weight: 700;
+    color: var(--navy)
+}
+
+/* ---------- 4. Quick reads ---------- */
+.bl-quick-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem
+}
+
+.bl-quick .lead {
+    color: #cfe3e8;
+    margin-bottom: 0
+}
+
+.bl-arrows {
+    display: flex;
+    gap: .6rem;
+    flex: none
+}
+
+.bl-arrows button {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, .4);
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background .25s, border-color .25s
+}
+
+.bl-arrows button:hover {
+    background: var(--teal);
+    border-color: var(--teal)
+}
+
+.bl-strip {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: .5rem
+}
+
+.bl-strip::-webkit-scrollbar {
+    display: none
+}
+
+.bl-tip {
+    flex: 0 0 min(300px, 78%);
+    scroll-snap-align: start;
+    padding: 1.8rem;
+    border-radius: var(--r);
+    background: rgba(255, 255, 255, .07);
+    border: 1px solid rgba(255, 255, 255, .14)
+}
+
+.bl-tip i {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: #fff;
+    font-size: 1.2rem
+}
+
+.bl-tip h3 {
+    margin: 1.1rem 0 .4rem
+}
+
+.bl-tip p {
+    color: #cfe3e8;
+    font-size: .95rem
+}
+
+.bl-bar {
+    height: 4px;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, .15)
+}
+
+.bl-bar i {
+    display: block;
+    width: 30%;
+    height: 100%;
+    border-radius: 4px;
+    background: #6fd6d3
+}
+
+/* ---------- 5. Numbers ---------- */
+.bl-nums {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 4rem;
+    align-items: center
+}
+
+.bl-note {
+    font-size: .9rem;
+    color: #4b6b77
+}
+
+.bl-note i {
+    color: var(--teal)
+}
+
+.bl-gauges {
+    list-style: none;
+    display: grid;
+    gap: 1.2rem
+}
+
+.bl-gauge {
+    padding: 1.4rem 1.6rem;
+    border-radius: var(--r);
+    background: var(--mint)
+}
+
+.bl-g-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .3rem 1rem
+}
+
+.bl-g-top h3 {
+    font-size: 1.15rem
+}
+
+.bl-g-top b {
+    color: var(--teal)
+}
+
+.bl-track {
+    position: relative;
+    height: 14px;
+    margin: 1rem 0 .5rem;
+    border-radius: 99px;
+    background: #d5e6e5
+}
+
+.bl-zone {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--s);
+    width: var(--w);
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--teal), #6fd6d3);
+    transform-origin: left
+}
+
+.bl-scale {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: .8rem;
+    color: #4b6b77
+}
+
+/* ---------- 6. Newsletter ---------- */
+.bl-news-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 4rem;
+    border-radius: calc(var(--r) * 1.5);
+    background: #fff;
+    box-shadow: 0 25px 60px rgba(10, 42, 67, .1);
+    overflow: hidden;
+    isolation: isolate
+}
+
+.bl-news-ico {
+    position: absolute;
+    right: -1rem;
+    top: -1.5rem;
+    z-index: -1;
+    font-size: 11rem;
+    color: var(--teal);
+    opacity: .08;
+    rotate: -12deg
+}
+
+.bl-news-card .lead {
+    margin-bottom: 0
+}
+
+.bl-news-card form {
+    background: var(--mint);
+    padding: 1.6rem
+}
+
+/* ---------- 7. CTA ---------- */
+.bl-cta-sec {
+    padding: 5rem var(--pad) 8rem
+}
+
+.bl-cta {
+    position: relative;
+    padding: 5rem 5rem calc(5rem + 40px);
+    border-radius: calc(var(--r) * 1.5);
+    background: linear-gradient(135deg, var(--teal), var(--navy));
+    color: #fff;
+    text-align: center;
+    overflow: hidden
+}
+
+.bl-cta>*:not(svg) {
+    position: relative;
+    z-index: 1
+}
+
+.bl-cta h2 {
+    max-width: 18ch;
+    margin-inline: auto;
+    color: #fff
+}
+
+.bl-cta .lead {
+    margin-inline: auto
+}
+
+.bl-cta .hero-actions {
+    justify-content: center
+}
+
+.bl-cta-ecg {
+    position: absolute;
+    left: 0;
+    bottom: .8rem;
+    width: 100%;
+    height: 60px;
+    opacity: .3
+}
+
+/* ---------- Tablet ---------- */
+@media(max-width:1100px) {
+    .bl-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .bl-feat,
+    .bl-nums {
+        gap: 2.5rem
+    }
+}
+
+@media(max-width:860px) {
+    .bl-feat,
+    .bl-nums,
+    .bl-news-card {
+        grid-template-columns: 1fr;
+        gap: 2rem
+    }
+
+    .bl-feat-img {
+        width: min(100%, 400px)
+    }
+}
+
+/* ---------- Mobile ---------- */
+@media(max-width:640px) {
+    .bl-grid {
+        grid-template-columns: 1fr
+    }
+
+    .bl-tools {
+        flex-direction: column;
+        align-items: stretch
+    }
+
+    .bl-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding-bottom: .3rem
+    }
+
+    .bl-filters::-webkit-scrollbar {
+        display: none
+    }
+
+    .bl-filters button {
+        flex: none
+    }
+
+    .bl-sort {
+        width: 100%;
+        justify-content: space-between
+    }
+
+    .bl-sort select {
+        flex: 1;
+        min-width: 0
+    }
+
+    .bl-arrows {
+        display: none
+    }
+}
+
+@media(max-width:520px) {
+    .bl-cta .hero-actions .btn {
+        width: 100%;
+        text-align: center
+    }
+
+    .bl-gauge {
+        padding: 1.2rem
+    }
+}
+
+
+/* ---------- Fixed-value responsive overrides (replaces clamp()) ---------- */
+@media(max-width:1100px) {
+    .bl-news-card {
+        padding: 3.05rem
+    }
+
+    .bl-cta-sec {
+        padding: 3.7rem var(--pad) 5.5rem
+    }
+
+    .bl-cta {
+        padding: 4.3rem 3.7rem calc(4.3rem + 40px)
+    }
+}
+
+@media(max-width:860px) {
+    .bl-news-card {
+        padding: 2.15rem
+    }
+
+    .bl-cta-sec {
+        padding: 2.6rem var(--pad) 4rem
+    }
+
+    .bl-cta {
+        padding: 3rem 2.6rem calc(3rem + 40px)
+    }
+}
+
+@media(max-width:520px) {
+    .bl-news-card {
+        padding: 2rem
+    }
+
+    .bl-cta-sec {
+        padding: 2rem var(--pad) 4rem
+    }
+
+    .bl-cta {
+        padding: 2.5rem 1.5rem calc(2.5rem + 40px)
+    }
+}
+/* ---------- Featured read: aligned to page gutters + enhancements ---------- */
+.bl-feat {
+    position: relative;
+    isolation: isolate;
+    overflow-x: clip;
+    padding-left: var(--pad);   /* same gutters as the header and other sections */
+    padding-right: var(--pad);
+    grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
+    gap: 4.5rem
+}
+
+/* soft glow behind the photo */
+.bl-feat::before {
+    content: "";
+    position: absolute;
+    left: -6%;
+    top: 50%;
+    z-index: -1;
+    width: 560px;
+    max-width: 90vw;
+    aspect-ratio: 1;
+    translate: 0 -50%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(31, 162, 166, .14), transparent 68%);
+    pointer-events: none
+}
+
+.bl-feat-img {
+    justify-self: start;        /* photo now starts on the page gutter, not floating mid-column */
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 1 / 1.05
+}
+
+/* let the text use the whole right column instead of stopping short */
+.bl-feat-text {
+    min-width: 0
+}
+
+.bl-feat-text h2 {
+    max-width: none
+}
+
+.bl-feat-text .lead {
+    max-width: none
+}
+
+.bl-points {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    margin: 0 0 1.8rem
+}
+
+.bl-points li {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem .9rem;
+    border-radius: 99px;
+    background: var(--mint);
+    color: var(--navy);
+    font-size: .85rem;
+    font-weight: 700
+}
+
+.bl-points i {
+    color: var(--teal)
+}
+
+.bl-feat-text .btn i {
+    margin-left: .5rem;
+    transition: transform .3s
+}
+
+.bl-feat-text .btn:hover i {
+    transform: translateX(5px)
+}
+
+@media(max-width:1100px) {
+    .bl-feat {
+        grid-template-columns: minmax(0, .85fr) minmax(0, 1fr);
+        gap: 2.5rem
+    }
+
+    .bl-feat-img {
+        aspect-ratio: 4 / 5
+    }
+}
+
+@media(max-width:860px) {
+    .bl-feat {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem
+    }
+
+    /* stacked: photo spans the gutters and is shorter so the text stays in view */
+    .bl-feat-img {
+        justify-self: stretch;
+        max-width: none;
+        width: 100%;
+        aspect-ratio: 16/11
+    }
+
+    .bl-feat::before {
+        top: 20%;
+        left: 50%;
+        translate: -50% 0
+    }
+}
+
+@media(max-width:520px) {
+    .bl-feat-img {
+        aspect-ratio: 4/3;
+        border-radius: 16px
+    }
+
+    .bl-points li {
+        font-size: .8rem;
+        padding: .4rem .75rem
+    }
+
+    .bl-feat-text .btn {
+        width: 100%;
+        text-align: center
+    }
+}
+/* ---------- Quick reads: marquee ---------- */
+.bl-play i {
+    font-size: .85rem
+}
+
+.bl-play[aria-pressed="true"] {
+    background: var(--teal);
+    border-color: var(--teal)
+}
+
+.bl-quick.mq .bl-strip {
+    overflow: hidden;
+    scroll-snap-type: none;
+    padding-bottom: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent)
+}
+
+.bl-mq-track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: blMarquee var(--mq-dur, 40s) linear infinite
+}
+
+.bl-mq-track .bl-tip {
+    flex: 0 0 300px;
+    margin-right: 1rem
+}
+
+@keyframes blMarquee {
+    to {
+        transform: translateX(-50%)
+    }
+}
+
+/* pause states */
+.bl-strip:hover .bl-mq-track,
+.bl-strip:focus-within .bl-mq-track,
+.bl-strip.paused .bl-mq-track,
+.bl-strip.hold .bl-mq-track,
+.bl-strip.off .bl-mq-track {
+    animation-play-state: paused
+}
+
+/* arrows and progress bar make no sense on a marquee; keep only pause/play */
+.bl-quick.mq .bl-arrows button:not(.bl-play),
+.bl-quick.mq .bl-bar {
+    display: none
+}
+
+@media(max-width:640px) {
+    .bl-quick.mq .bl-arrows {
+        display: flex
+    }
+
+    .bl-play {
+        width: 42px;
+        height: 42px
+    }
+
+    .bl-mq-track .bl-tip {
+        flex-basis: min(280px, 78vw);
+        padding: 1.5rem
+    }
+}
+
+/* ---------- Section tags (.kicker) on every background ---------- */
+.tint .kicker {
+    background: #fff
+}
+
+.bl-news-card .kicker {
+    background: var(--mint)
+}
+
+.dark .kicker,
+.bl-cta .kicker {
+    background: rgba(255, 255, 255, .14);
+    border: 1px solid rgba(255, 255, 255, .28);
+    color: #fff
+}
+
+.bl-cta .kicker {
+    margin-bottom: 1rem
+}
+
+/* ---------- Blog: topic chips, make the row scroll all the way on phones ---------- */
+@media(max-width:640px) {
+    /* the base rule has flex-wrap: wrap, which lets a column container grow as wide as the whole chip row,
+       so the row never overflowed inside its own box and the last chips could not be reached */
+    .bl-tools { flex-wrap: nowrap; min-width: 0 }
+
+    .bl-filters {
+        min-width: 0;
+        /* run edge to edge so chips slide under the screen edge, with the page gutter kept at both ends */
+        margin-inline: calc(var(--pad) * -1);
+        padding: .2rem var(--pad) .5rem;
+        scroll-padding-inline: var(--pad);
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch
+    }
+}

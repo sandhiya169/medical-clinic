@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Services | Stackly Clinic</title>
+  <meta name="description"
+    content="General medicine, cardiology, diagnostics, paediatrics and physiotherapy at Stackly Clinic, with same-day reports and health check packages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/services.css">
+</head>
+
+<body>
+  <div class="preloader" id="preloader" role="status" aria-live="polite">
+    <div class="preloader-inner">
+      <div class="preloader-mark" aria-hidden="true">+</div>
+      <div class="preloader-name">Stackly</div>
+      <div class="preloader-bar" aria-hidden="true"><span></span></div>
+      <span class="sr-only"
+        style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Loading…</span>
+    </div>
+  </div>
+  <noscript>
+    <style>
+      .preloader {
+        display: none !important
+      }
+    </style>
+  </noscript>
+  <script src="assets/js/preloader.js"></script>
+  <header class="nav" id="nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+    <nav id="menu" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active" aria-current="page">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn btn-teal menu-cta"><i class="fas fa-arrow-right-to-bracket" aria-hidden="true"></i> Login</a>
+    </nav>
+    <a href="login.html" class="btn btn-teal nav-cta"><i class="fas fa-arrow-right-to-bracket" aria-hidden="true"></i> Login</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- 1. Hero with clinic directory -->
+    <section class="sv-hero" id="top">
+      <div class="sv-hero-text">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span
+            aria-current="page">Services</span></nav>
+        <p class="kicker">Our services</p>
+        <h1>Everything you need, under one roof.</h1>
+        <p class="lead">Doctors, tests and treatment in the same building, so you never carry reports from one place to
+          another.</p>
+        <div class="hero-actions"><a href="contact.html" class="btn btn-teal"><i class="fas fa-calendar-check"></i> Book appointment</a>
+          <a href="404.html"
+            class="btn btn-ghost">See health packages <i class="fas fa-arrow-right"></i></a></div>
+        <ul class="sv-mini">
+          <li data-aos="fade-up" data-aos-delay="500"><b>5</b><span>departments</span></li>
+          <li data-aos="fade-up" data-aos-delay="650"><b>8</b><span>specialist doctors</span></li>
+          <li data-aos="fade-up" data-aos-delay="800"><b>9 pm</b><span>closing, Mon to Sat</span></li>
+        </ul>
+      </div>
+      <div class="sv-stage">
+        <span class="sv-deco sv-dots" aria-hidden="true"></span>
+        <span class="sv-deco sv-ring" aria-hidden="true"></span>
+        <aside class="sv-board" aria-label="Clinic directory">
+          <div class="sv-board-head" data-aos="fade-down" data-aos-delay="600"><b>Clinic directory</b><span><i
+                class="sv-dot"></i>Open until 9 pm</span></div>
+          <a href="#explore" class="sv-dir" data-tab="general"><i class="fas fa-stethoscope"></i><span><b>General
+                medicine</b><small>Check-ups, fevers, long-term care</small></span><em
+              class="fas fa-arrow-right"></em></a>
+          <a href="#explore" class="sv-dir" data-tab="cardiology"><i
+              class="fas fa-heart-pulse"></i><span><b>Cardiology</b><small>ECG,
+                echo, treadmill tests</small></span><em class="fas fa-arrow-right"></em></a>
+          <a href="#explore" class="sv-dir" data-tab="diagnostics"><i class="fas fa-microscope"></i><span><b>Diagnostics
+                lab</b><small>Blood work and imaging</small></span><em class="fas fa-arrow-right"></em></a>
+          <a href="#explore" class="sv-dir" data-tab="paediatrics"><i
+              class="fas fa-baby"></i><span><b>Paediatrics</b><small>Child check-ups, vaccines, fevers</small></span><em
+              class="fas fa-arrow-right"></em></a>
+          <a href="#explore" class="sv-dir" data-tab="physio"><i
+              class="fas fa-bone"></i><span><b>Physiotherapy</b><small>Pain
+                relief and recovery</small></span><em class="fas fa-arrow-right"></em></a>
+          <div class="sv-board-foot" data-aos="fade-up" data-aos-delay="900">
+            <span><b>Not sure where to start?</b>We will point you to the right doctor.</span>
+            <a href="login.html" class="btn btn-teal sv-foot-btn">Book a visit</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 2. Department explorer (tabs) -->
+    <section class="sec sv-explore" id="explore">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">Departments</p>
+        <h2>Choose a department.</h2>
+      </div>
+      <div class="sv-tabs" data-aos="fade-up">
+        <div class="sv-tablist" role="tablist" aria-label="Departments">
+          <button role="tab" id="t-general" aria-controls="p-general" aria-selected="true"><i
+              class="fas fa-stethoscope"></i>General medicine</button>
+          <button role="tab" id="t-cardiology" aria-controls="p-cardiology" aria-selected="false" tabindex="-1"><i
+              class="fas fa-heart-pulse"></i>Cardiology</button>
+          <button role="tab" id="t-diagnostics" aria-controls="p-diagnostics" aria-selected="false" tabindex="-1"><i
+              class="fas fa-microscope"></i>Diagnostics lab</button>
+          <button role="tab" id="t-paediatrics" aria-controls="p-paediatrics" aria-selected="false" tabindex="-1"><i
+              class="fas fa-baby"></i>Paediatrics</button>
+          <button role="tab" id="t-physio" aria-controls="p-physio" aria-selected="false" tabindex="-1"><i
+              class="fas fa-bone"></i>Physiotherapy</button>
+        </div>
+        <div class="sv-panels">
+          <article class="sv-panel" role="tabpanel" id="p-general" aria-labelledby="t-general">
+            <div class="sv-p-img"><img
+                src="assets/images/general-medicine.webp"
+                alt="General physician consultation"></div>
+            <div class="sv-p-body">
+              <h3>General medicine</h3>
+              <p>Your first stop for most concerns. We listen, examine and explain, then bring in a specialist only
+                when you need one.</p>
+              <ul class="sv-chips">
+                <li>Check-ups</li>
+                <li>Fevers and infections</li>
+                <li>Long-term conditions</li>
+                <li>Second opinions</li>
+              </ul>
+              <dl class="sv-facts">
+                <div>
+                  <dt>Best for</dt>
+                  <dd>Adults and seniors</dd>
+                </div>
+                <div>
+                  <dt>You get</dt>
+                  <dd>A clear plan on your phone</dd>
+                </div>
+              </dl>
+              <a href="login.html" class="btn btn-teal">Book a visit</a>
+            </div>
+          </article>
+          <article class="sv-panel" role="tabpanel" id="p-cardiology" aria-labelledby="t-cardiology" hidden>
+            <div class="sv-p-img"><img
+                src="assets/images/cardiology.webp"
+                alt="Heart and imaging scan"></div>
+            <div class="sv-p-body">
+              <h3>Cardiology</h3>
+              <p>Heart tests and specialist advice in one visit, with reports ready the same day.</p>
+              <ul class="sv-chips">
+                <li>ECG</li>
+                <li>Echo</li>
+                <li>Treadmill test</li>
+                <li>Heart health review</li>
+              </ul>
+              <dl class="sv-facts">
+                <div>
+                  <dt>Best for</dt>
+                  <dd>Chest discomfort, high blood pressure, risk checks</dd>
+                </div>
+                <div>
+                  <dt>You get</dt>
+                  <dd>Same-day reports</dd>
+                </div>
+              </dl>
+              <a href="login.html" class="btn btn-teal">Book a visit</a>
+            </div>
+          </article>
+          <article class="sv-panel" role="tabpanel" id="p-diagnostics" aria-labelledby="t-diagnostics" hidden>
+            <div class="sv-p-img"><img
+                src="assets/images/in-house-lab.webp"
+                alt="Laboratory technician"></div>
+            <div class="sv-p-body">
+              <h3>Diagnostics lab</h3>
+              <p>An in-house lab and imaging, so results reach your doctor and your inbox without a second trip.</p>
+              <ul class="sv-chips">
+                <li>Blood work</li>
+                <li>Imaging</li>
+                <li>Reports to your phone</li>
+              </ul>
+              <dl class="sv-facts">
+                <div>
+                  <dt>Best for</dt>
+                  <dd>Routine tests and follow-ups</dd>
+                </div>
+                <div>
+                  <dt>You get</dt>
+                  <dd>Most blood tests within 4 hours</dd>
+                </div>
+              </dl>
+              <a href="login.html" class="btn btn-teal">Book a visit</a>
+            </div>
+          </article>
+          <article class="sv-panel" role="tabpanel" id="p-paediatrics" aria-labelledby="t-paediatrics" hidden>
+            <div class="sv-p-img"><img
+                src="assets/images/paediatric-care.webp"
+                alt="Paediatrician with a child patient"></div>
+            <div class="sv-p-body">
+              <h3>Paediatrics</h3>
+              <p>Gentle, unhurried care for babies, children and teenagers, from routine growth checks to fevers and
+                infections.</p>
+              <ul class="sv-chips">
+                <li>Growth checks</li>
+                <li>Vaccinations</li>
+                <li>Fevers and infections</li>
+              </ul>
+              <dl class="sv-facts">
+                <div>
+                  <dt>Best for</dt>
+                  <dd>Newborns to teenagers</dd>
+                </div>
+                <div>
+                  <dt>You get</dt>
+                  <dd>A clear plan and vaccination chart for parents</dd>
+                </div>
+              </dl>
+              <a href="login.html" class="btn btn-teal">Book a visit</a>
+            </div>
+          </article>
+          <article class="sv-panel" role="tabpanel" id="p-physio" aria-labelledby="t-physio" hidden>
+            <div class="sv-p-img"><img
+                src="assets/images/physiotherapy.webp"
+                alt="Treatment room"></div>
+            <div class="sv-p-body">
+              <h3>Physiotherapy</h3>
+              <p>Hands-on assessment and a recovery plan you can follow at home between sessions.</p>
+              <ul class="sv-chips">
+                <li>Back and neck pain</li>
+                <li>Joint pain</li>
+                <li>Recovery after injury</li>
+                <li>Exercise plans</li>
+              </ul>
+              <dl class="sv-facts">
+                <div>
+                  <dt>Best for</dt>
+                  <dd>Aches, injuries and stiffness</dd>
+                </div>
+                <div>
+                  <dt>You get</dt>
+                  <dd>A plan after your first assessment</dd>
+                </div>
+              </dl>
+              <a href="login.html" class="btn btn-teal">Book a visit</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Results board -->
+    <section class="sec dark sv-results" id="results">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">Results</p>
+        <h2>How quickly you get your results.</h2>
+        <p class="lead">Tests happen in the same building, and reports reach your phone and email.</p>
+      </div>
+      <table class="sv-ledger">
+        <thead>
+          <tr>
+            <th scope="col">Test</th>
+            <th scope="col">Before you come</th>
+            <th scope="col">Results</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" data-label="Test"><i class="fas fa-vial"></i>Blood tests</th>
+            <td data-label="Before you come">Some tests need 8 to 10 hours of fasting</td>
+            <td data-label="Results"><span class="sv-pill"><i class="sv-dot"></i>Within 4 hours</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Test"><i class="fas fa-wave-square"></i>ECG</th>
+            <td data-label="Before you come">Nothing special</td>
+            <td data-label="Results"><span class="sv-pill"><i class="sv-dot"></i>Same day</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Test"><i class="fas fa-heart-pulse"></i>Echo</th>
+            <td data-label="Before you come">Nothing special</td>
+            <td data-label="Results"><span class="sv-pill"><i class="sv-dot"></i>Same-day report</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Test"><i class="fas fa-person-running"></i>Treadmill test</th>
+            <td data-label="Before you come">Wear comfortable clothes and shoes</td>
+            <td data-label="Results"><span class="sv-pill"><i class="sv-dot"></i>Same-day report</span></td>
+          </tr>
+          <tr>
+            <th scope="row" data-label="Test"><i class="fas fa-x-ray"></i>Imaging</th>
+            <td data-label="Before you come">We tell you what to do when you book</td>
+            <td data-label="Results"><span class="sv-pill"><i class="sv-dot"></i>Same-day report</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 4. Health check packages -->
+    <section class="sec tint" id="packages">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">Packages</p>
+        <h2>Health check packages.</h2>
+        <p class="lead">Bundled tests with a doctor's review. We adjust each one to your age and history.</p>
+      </div>
+      <ul class="sv-tickets">
+        <li data-aos="fade-up">
+          <div class="sv-ticket">
+            <div class="sv-t-top"><i class="fas fa-leaf"></i>
+              <h3>Essential check</h3>
+              <p>A yearly baseline for healthy adults.</p>
+            </div>
+            <ul class="sv-t-list ticks">
+              <li>Doctor consultation</li>
+              <li>Blood pressure and BMI</li>
+              <li>Blood sugar</li>
+              <li>Complete blood count</li>
+              <li>Urine test</li>
+            </ul>
+            <a href="contact.html" class="btn btn-ghost">Book this package</a>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="100">
+          <div class="sv-ticket feat">
+            <div class="sv-t-top"><i class="fas fa-heart-pulse"></i>
+              <h3>Heart check</h3>
+              <p>For family history, high pressure or ages 40 and above.</p>
+            </div>
+            <ul class="sv-t-list ticks">
+              <li>Cardiologist consultation</li>
+              <li>ECG and echo</li>
+              <li>Cholesterol profile</li>
+              <li>Blood sugar</li>
+              <li>Treadmill test, if advised</li>
+            </ul>
+            <a href="contact.html" class="btn btn-light">Book this package</a>
+          </div>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="200">
+          <div class="sv-ticket">
+            <div class="sv-t-top"><i class="fas fa-shield-heart"></i>
+              <h3>Complete check</h3>
+              <p>Everything in one morning, with a single review.</p>
+            </div>
+            <ul class="sv-t-list ticks">
+              <li>Everything in the heart check</li>
+              <li>Liver and kidney tests</li>
+              <li>Thyroid test</li>
+              <li>Chest imaging</li>
+              <li>Vitamin D and B12 tests</li>
+            </ul>
+            <a href="contact.html" class="btn btn-ghost">Book this package</a>
+          </div>
+        </li>
+      </ul>
+      <p class="sv-fine" data-aos="fade-up"><i class="fas fa-phone"></i> Call us for current pricing and to
+        customise a package.</p>
+    </section>
+
+    <!-- 5. How a visit works -->
+    <section class="sec sv-flow" id="how">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">How it works</p>
+        <h2>How your visit works.</h2>
+        <p class="lead">From booking to your results, everything happens in one building.</p>
+      </div>
+      <ol class="sv-steps">
+        <li class="sv-step" data-aos="fade-up">
+          <span class="sv-step-no" aria-hidden="true">1</span>
+          <span class="sv-step-ico" aria-hidden="true"><i class="fas fa-calendar-check"></i></span>
+          <h3>Book a slot</h3>
+          <p>Pick a doctor and a time online. We confirm your booking during opening hours.</p>
+          <small class="sv-step-meta"><i class="fas fa-clock" aria-hidden="true"></i>Confirmed within 30 minutes</small>
+        </li>
+        <li class="sv-step" data-aos="fade-up" data-aos-delay="100">
+          <span class="sv-step-no" aria-hidden="true">2</span>
+          <span class="sv-step-ico" aria-hidden="true"><i class="fas fa-door-open"></i></span>
+          <h3>Check in</h3>
+          <p>Show your photo ID at the front desk and hand over any earlier reports or prescriptions.</p>
+          <small class="sv-step-meta"><i class="fas fa-id-card" aria-hidden="true"></i>Bring a photo ID</small>
+        </li>
+        <li class="sv-step" data-aos="fade-up" data-aos-delay="200">
+          <span class="sv-step-no" aria-hidden="true">3</span>
+          <span class="sv-step-ico" aria-hidden="true"><i class="fas fa-user-doctor"></i></span>
+          <h3>See your doctor</h3>
+          <p>Talk through what is bothering you. If you need tests, they are done in the same building.</p>
+          <small class="sv-step-meta"><i class="fas fa-vial" aria-hidden="true"></i>Tests on site</small>
+        </li>
+        <li class="sv-step" data-aos="fade-up" data-aos-delay="300">
+          <span class="sv-step-no" aria-hidden="true">4</span>
+          <span class="sv-step-ico" aria-hidden="true"><i class="fas fa-pills"></i></span>
+          <h3>Get results and medicines</h3>
+          <p>Reports reach your phone and email, and you can collect your medicines at our pharmacy.</p>
+          <small class="sv-step-meta"><i class="fas fa-file-medical" aria-hidden="true"></i>Same-day reports</small>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 6. Book vs emergency -->
+    <section class="sec tint sv-triage" id="emergency">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">Need help?</p>
+        <h2>Book a visit, or get help right now?</h2>
+      </div>
+      <div class="sv-split">
+        <article class="sv-book" data-aos="fade-right">
+          <h3><i class="fas fa-calendar-check"></i>Book an appointment for</h3>
+          <ul>
+            <li>Routine check-ups and follow-ups</li>
+            <li>Mild fever, cough or stomach upset</li>
+            <li>Reviewing test results</li>
+            <li>Child vaccinations or a child's fever</li>
+            <li>Back, neck or joint pain</li>
+          </ul>
+        </article>
+        <article class="sv-er" data-aos="fade-left" data-aos-delay="100">
+          <h3><i class="fas fa-triangle-exclamation"></i>Call 108 or go to the nearest emergency room for</h3>
+          <ul>
+            <li>Chest pain or pressure</li>
+            <li>Trouble breathing</li>
+            <li>Sudden weakness or slurred speech</li>
+            <li>Heavy bleeding that will not stop</li>
+            <li>Fainting or severe injury</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="sec sv-faq" id="faq">
+      <div class="sv-faq-intro" data-aos="fade-right">
+        <p class="kicker">FAQ</p>
+        <h2>Questions we hear most.</h2>
+        <p class="lead">Quick answers before you visit. If yours is not here, ask us and a nurse will reply.</p>
+        <a href="contact.html" class="btn btn-ghost">Ask us directly <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="sv-acc" data-aos="fade-left">
+        <details class="sv-q" open>
+          <summary>Do I need an appointment?</summary>
+          <p>Booking ahead is the quickest way to see a doctor at your chosen time. We confirm bookings within 30
+            minutes during opening hours. For tests, mention them when you book so we can guide you on timing.</p>
+        </details>
+        <details class="sv-q">
+          <summary>Do I need to fast before a blood test?</summary>
+          <p>Some tests need a fast and many do not. When you book a test we tell you which applies, so you can plan
+            your morning without guessing.</p>
+        </details>
+        <details class="sv-q">
+          <summary>How soon will I get my reports?</summary>
+          <p>Most common tests are reported the same day. The results board above shows the usual time for each test.
+          </p>
+        </details>
+        <details class="sv-q">
+          <summary>Can I bring my child for a fever?</summary>
+          <p>Yes. Our paediatrics team sees children for fever, vaccinations and routine check-ups. A baby under 3
+            months with a fever needs urgent care, so call us or go to the nearest emergency room straight away.</p>
+        </details>
+        <details class="sv-q">
+          <summary>Can I use my health insurance?</summary>
+          <p>Yes. Bring your insurance card and we will help you with a cashless claim where your insurer allows it.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. CTA -->
+    <section class="sv-cta-sec" id="visit">
+      <div class="sv-cta" data-aos="fade-up">
+        <svg class="sv-cta-ecg" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+          <path id="ctaEcg"
+            d="M0 40 H300 L330 40 345 10 365 70 385 25 400 40 H650 L675 40 690 5 712 75 732 30 748 40 H1200" fill="none"
+            stroke="#fff" stroke-width="3" />
+        </svg>
+        <p class="kicker">Get in touch</p>
+        <h2>Not sure which service you need?</h2>
+        <p class="lead">Tell us how you feel and a nurse will point you to the right doctor. We confirm bookings within
+          30 minutes during opening hours.</p>
+        <div class="hero-actions"><a href="404.html" class="btn btn-light"><i class="fas fa-calendar-check"></i> Consultation</a>
+          <a href="contact.html"
+            class="btn btn-ghost-light">Contact us <i class="fas fa-arrow-right"></i></a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-grid">
+      <div class="foot-brand" data-aos="fade-up" data-aos-delay="100"><a href="index.html" class="logo">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+        <p>Calm, clear care for families across Chennai, with doctors, tests and pharmacy in one building.</p>
+        <div class="social">
+          <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fab fa-twitter"></i></a>
+          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Services</h4>
+        <a href="404.html">General Medicine</a>
+        <a href="404.html">Cardiology</a>
+        <a href="404.html">Diagnostics Lab</a>
+        <a href="404.html">Paediatrics</a>
+        <a href="404.html">Physiotherapy</a>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Visit us</h4>
+        <p><i class="fas fa-map-marker-alt"></i>&nbsp; Salem, Tamil Nadu, India</p>
+        <p><i class="fas fa-clock"></i>&nbsp; Mon to Sat, 8 am to 9 pm</p>
+        <p><a href="404.html"><i class="fas fa-phone"></i>&nbsp; +91 9876543210</a></p>
+        <p><a href="404.html"><i class="fas fa-envelope"></i>&nbsp; info@thestackly.com</a></p>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <p>© 2026 Stackly Clinic</p>
+      <div class="foot-legal">
+        <a href="404.html">Terms &amp; Conditions</a>
+        <a href="404.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/services.js"></script>
+</body>
+
+</html>

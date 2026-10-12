@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Stackly Clinic</title>
+  <meta name="description" content="The page you were looking for could not be found. Head back to Stackly Clinic's home page.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/404.css">
+</head>
+
+<body>
+  <main>
+    <section class="nf" id="top">
+      <div class="nf-text">
+        <p class="kicker">Error 404</p>
+        <h1>This page missed its appointment.</h1>
+        <p class="lead">We checked every room and couldn't find it. The link may be old, or the address may have a typo.
+          Your health records and bookings are safe.</p>
+        <div class="hero-actions">
+          <a href="index.html" class="btn btn-teal"><i class="fas fa-house"></i>&nbsp; Back to home</a>
+          <button type="button" class="btn btn-ghost" id="goBack"><i class="fas fa-arrow-left"></i>&nbsp; Go back</button>
+        </div>
+      </div>
+
+      <div class="nf-media">
+        <div class="monitor" id="monitor">
+          <div class="mon-top">
+            <span class="mon-dot" aria-hidden="true"></span>
+            <span>Page monitor</span>
+            <span class="mon-path" id="reqPath" title="Requested address">/</span>
+          </div>
+
+          <div class="mon-code" role="img" aria-label="404">
+            <span>4</span><span class="ring" id="ring" aria-hidden="true"></span><span>4</span>
+          </div>
+
+          <svg class="mon-ecg" viewBox="0 0 600 160" aria-hidden="true">
+            <path id="traceGhost" d="M0 80 H60 L75 80 85 40 100 120 112 60 120 80 H200 L215 80 225 30 242 130 255 55 264 80 H340 L355 80 365 50 378 110 386 80 H600"
+              fill="none" stroke="rgba(111,214,211,.14)" stroke-width="3" stroke-linejoin="round" />
+            <path id="trace" d="M0 80 H60 L75 80 85 40 100 120 112 60 120 80 H200 L215 80 225 30 242 130 255 55 264 80 H340 L355 80 365 50 378 110 386 80 H600"
+              fill="none" stroke="#6fd6d3" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+            <circle id="traceDot" r="6" cx="0" cy="80" fill="#fff" />
+          </svg>
+
+          <div class="mon-stats">
+            <div><b id="bpm">72</b><span>bpm</span></div>
+            <p id="status" role="status">Searching for a pulse…</p>
+          </div>
+        </div>
+
+        <div class="float-card" data-aos="zoom-in" data-aos-delay="1800">
+          <strong>Not an emergency</strong><span>If you need urgent help, call 108.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/404.js"></script>
+</body>
+
+</html>

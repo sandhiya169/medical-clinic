@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+  <title>Create account | Stackly Clinic</title>
+  <meta name="robots" content="noindex">
+</head>
+
+<body>
+  <main class="au">
+    <aside class="au-brand">
+      <div class="au-brand-body">
+        <p class="kicker">Free for every patient</p>
+        <h1>Start with one simple account.</h1>
+        <p class="lead">Set it up once and never repeat your history again.</p>
+        <ul class="au-ticks">
+          <li><i class="fas fa-check"></i>Digital prescriptions and reports</li>
+          <li><i class="fas fa-check"></i>SMS reminders before each visit</li>
+          <li><i class="fas fa-check"></i>Family members under one login</li>
+        </ul>
+      </div>
+      
+      <svg class="au-ecg" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+        <path id="ecgPath" d="M0 40 H300 L330 40 345 10 365 70 385 25 400 40 H650 L675 40 690 5 712 75 732 30 748 40 H1200" fill="none" stroke="#6fd6d3" stroke-width="3" />
+      </svg>
+    </aside>
+
+    <section class="au-side">
+      <div class="au-wrap" data-aos="fade-up">
+        <div class="au-top">
+          <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+          <a href="index.html" class="au-back"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to home</a>
+        </div>
+        <h1 class="au-title">Create your account</h1>
+        <p class="au-sub">It takes less than a minute.</p>
+
+        <form class="au-form" id="signupForm" style="margin-top:1.6rem" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" autocomplete="name" placeholder="Priya Sharma" required>
+            <p class="err" role="alert"></p>
+          </div>
+          <div class="pair">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+              <p class="err" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="98765 43210" required>
+              <p class="err" role="alert"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select your role</option>
+              <option value="patient">Patient</option>
+              <option value="doctor">Doctor</option>
+            </select>
+            <p class="err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="pw">
+              <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Create a password" required>
+              <button type="button" class="pw-toggle" aria-label="Show password"><i class="fas fa-eye"></i></button>
+            </div>
+            <p class="err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="confirm">Confirm password</label>
+            <div class="pw">
+              <input id="confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Repeat your password" required>
+              <button type="button" class="pw-toggle" aria-label="Show password"><i class="fas fa-eye"></i></button>
+            </div>
+            <p class="err" role="alert"></p>
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" name="terms"><span>I agree to the <a href="404.html">Terms</a> and <a href="404.html">Privacy Policy</a>.</span></label>
+            <p class="err" role="alert"></p>
+          </div>
+          <button class="btn btn-teal" type="submit" id="submitBtn">Create account</button>
+          <p class="msg" id="msg" role="status"></p>
+        </form>
+
+        <p class="au-switch">Already have an account? <a href="login.html">Sign in</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

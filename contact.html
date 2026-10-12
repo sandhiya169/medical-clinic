@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Stackly Clinic</title>
+  <meta name="description"
+    content="Call, message or visit Stackly Clinic. Book an appointment, find our branches and check opening hours.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+  <div class="preloader" id="preloader" role="status" aria-live="polite">
+    <div class="preloader-inner">
+      <div class="preloader-mark" aria-hidden="true">+</div>
+      <div class="preloader-name">Stackly</div>
+      <div class="preloader-bar" aria-hidden="true"><span></span></div>
+      <span class="sr-only"
+        style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Loading…</span>
+    </div>
+  </div>
+  <noscript>
+    <style>
+      .preloader {
+        display: none !important
+      }
+    </style>
+  </noscript>
+  <script src="assets/js/preloader.js"></script>
+  <header class="nav" id="nav">
+    <a href="index.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+    <nav id="menu" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active" aria-current="page">Contact</a>
+      <a href="login.html" class="btn btn-teal menu-cta"><i class="fas fa-arrow-right-to-bracket" aria-hidden="true"></i> Login</a>
+    </nav>
+    <a href="login.html" class="btn btn-teal nav-cta"><i class="fas fa-arrow-right-to-bracket" aria-hidden="true"></i> Login</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="c-hero" id="top">
+      <div class="c-hero-text">
+        <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
+        <p class="kicker" data-aos="fade-up" data-aos-delay="400">We're here to help</p>
+        <h1>Connect with our <span class="mark">team directly.</span></h1>
+        <p class="lead">Call, message or walk in. A real member of our care team replies, usually within 30 minutes.</p>
+        <p class="status" id="status"><i class="dot"></i><span>Checking opening hours</span></p>
+        <div class="hero-actions">
+          <a class="btn btn-teal" href="404.html"><i class="fas fa-phone" aria-hidden="true"></i> Call now</a>
+          <a class="btn btn-ghost" href="404.html"><i class="fas fa-envelope" aria-hidden="true"></i> Send a message</a>
+          <a class="btn btn-ghost" href="404.html"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+        </div>
+        <ul class="trust">
+          <li><i class="fas fa-phone" aria-hidden="true"></i><b>Quick Assistance</b></li>
+          <li><i class="fas fa-language" aria-hidden="true"></i><b>Friendly Care</b></li>
+          <li><i class="fas fa-user-shield" aria-hidden="true"></i><b>Trusted & Secure</b></li>
+        </ul>
+      </div>
+      <div class="c-hero-media">
+        <span class="c-ring" aria-hidden="true"></span>
+        <div class="arch"><img
+            src="assets/images/image.webp"
+            alt="Bright, welcoming clinic reception corridor"></div>
+        <div class="float-card"><strong>12 min</strong><span>average reply time</span></div>
+        <div class="float-chip"><i class="fas fa-door-open" aria-hidden="true"></i> Walk-ins welcome</div>
+      </div>
+    </section>
+
+    <!-- 2. Contact lines -->
+    <section class="sec" id="channels">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">Contact options</p>
+        <h2>Pick the way that suits you.</h2>
+      </div>
+      <div class="pick" data-aos="fade-up">
+        <div class="pick-list" role="tablist" aria-label="Ways to contact us">
+          <button class="pk on" role="tab" aria-selected="true" aria-controls="p-call"><i
+              class="fas fa-phone"></i><span><b>Call</b><small>Fastest for urgent questions</small></span></button>
+          <button class="pk" role="tab" aria-selected="false" aria-controls="p-chat" tabindex="-1"><i
+              class="fab fa-whatsapp"></i><span><b>Chat</b><small>Quick questions and photos</small></span></button>
+          <button class="pk" role="tab" aria-selected="false" aria-controls="p-mail" tabindex="-1"><i
+              class="fas fa-envelope"></i><span><b>Email</b><small>Reports and longer queries</small></span></button>
+          <button class="pk" role="tab" aria-selected="false" aria-controls="p-visit" tabindex="-1"><i
+              class="fas fa-location-dot"></i><span><b>Visit</b><small>Walk in, no booking
+                needed</small></span></button>
+        </div>
+        <div class="stage">
+          <div class="pane on" id="p-call" role="tabpanel">
+            <div class="pane-t">
+              <div class="ring"><i class="fas fa-phone"></i></div>
+              <h3>+91 9876543210</h3>
+              <p>Mon to Sat, 8 am to 9 pm. A real person answers, not a recording.</p><a class="btn btn-light"
+                href="404.html">Call now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="viz">
+              <div class="wave" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i
+                  style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i
+                  style="--i:7"></i><i style="--i:8"></i></div>
+              <ul class="facts">
+                <li><b>20 sec</b><span>average time to answer</span></li>
+                <li><b>3</b><span>languages: Tamil, English, Hindi</span></li>
+                <li><b>9 pm</b><span>last call taken each day</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="pane" id="p-chat" role="tabpanel">
+            <div class="pane-t">
+              <h3>Chat with our care team</h3>
+              <p>Send a message or a photo of your report. We reply within minutes in opening hours.</p><a
+                class="btn btn-light" href="404.html">Open WhatsApp <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="viz">
+              <div class="phone">
+                <p class="ph-h"><i class="dot-on"></i>Stackly Clinic is online</p>
+                <div class="chat">
+                  <p class="b me">Hi, can I book a check-up this week?</p>
+                  <p class="b them">Of course! Do mornings or evenings work better?</p>
+                  <p class="b me">Evenings, please.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pane" id="p-mail" role="tabpanel">
+            <div class="pane-t">
+              <h3>Email us any time</h3>
+              <p>Best for reports, referrals and longer questions. We reply within one working day.</p><a
+                class="btn btn-light" href="404.html">Write an email <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="viz">
+              <div class="mail">
+                <p><span>To</span>info@thestackly.com</p>
+                <p><span>Subject</span>Question about my report</p>
+                <p class="body">Hello, I would like to ask about my blood test results from last week...</p>
+              </div>
+            </div>
+          </div>
+          <div class="pane" id="p-visit" role="tabpanel">
+            <div class="pane-t">
+              <div class="ring"><i class="fas fa-location-dot"></i></div>
+              <h3>Salem, Tamil Nadu</h3>
+              <p>Walk-ins are seen when a doctor is free. Parking is on site.</p><a class="btn btn-light"
+                href="404.html"> See map and branches <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="viz">
+              <div class="vimg"><img
+                  src="assets/images/consultation-rooms.webp"
+                  alt="Bright clinic reception corridor"><span>Open today until 9 pm</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Message form -->
+    <section class="sec tint msg-sec" id="message">
+      <div class="msg-intro" data-aos="fade-right">
+        <p class="kicker">Write to us</p>
+        <h2>Send us a message.</h2>
+        <p class="lead">Tell us what you need and when to call. We never share your details.</p>
+        <ul class="ticks">
+          <li>Reply within 30 minutes in opening hours</li>
+          <li>No account needed</li>
+          <li>Urgent? Call us instead</li>
+        </ul>
+      </div>
+      <form class="cform" id="cform" data-aos="fade-left" novalidate>
+        <div class="row2">
+          <label>Full name
+            <input name="name" required autocomplete="name" maxlength="60" aria-describedby="e-name">
+            <small class="err" id="e-name" aria-live="polite"></small>
+          </label>
+          <label>Phone
+            <input name="phone" type="tel" inputmode="tel" required autocomplete="tel" maxlength="16" placeholder="10-digit mobile number" aria-describedby="e-phone">
+            <small class="err" id="e-phone" aria-live="polite"></small>
+          </label>
+        </div>
+        <label>Email
+          <input name="email" type="email" required autocomplete="email" maxlength="80" aria-describedby="e-email">
+          <small class="err" id="e-email" aria-live="polite"></small>
+        </label>
+        <fieldset id="f-topic">
+          <legend>I'm contacting about</legend>
+          <div class="chips">
+            <label><input type="radio" name="topic" value="General medicine" required><span>General medicine</span></label>
+            <label><input type="radio" name="topic" value="Cardiology"><span>Cardiology</span></label>
+            <label><input type="radio" name="topic" value="Diagnostics lab"><span>Diagnostics lab</span></label>
+            <label><input type="radio" name="topic" value="Paediatrics"><span>Paediatrics</span></label>
+            <label><input type="radio" name="topic" value="Something else"><span>Something else</span></label>
+          </div>
+          <small class="err" id="e-topic" aria-live="polite"></small>
+        </fieldset>
+        <fieldset id="f-when">
+          <legend>Best time to call</legend>
+          <div class="chips">
+            <label><input type="radio" name="when" value="Morning" required><span>Morning</span></label>
+            <label><input type="radio" name="when" value="Afternoon"><span>Afternoon</span></label>
+            <label><input type="radio" name="when" value="Evening"><span>Evening</span></label>
+          </div>
+          <small class="err" id="e-when" aria-live="polite"></small>
+        </fieldset>
+        <label>Message
+          <textarea name="msg" rows="4" maxlength="300" required aria-describedby="e-msg"></textarea>
+          <small class="count" id="count">0 / 300</small>
+          <small class="err" id="e-msg" aria-live="polite"></small>
+        </label>
+        <button class="btn btn-teal" type="submit">Send message</button>
+        <p class="msg" id="fmsg" role="status"></p>
+      </form>
+    </section>
+
+    <!-- 4. Branches + map -->
+    <section class="sec" id="branches">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">Our branches</p>
+        <h2>Find us, then come in.</h2>
+      </div>
+      <div class="branches">
+        <div class="tabs" data-aos="fade-right" role="tablist">
+          <button class="tab on" role="tab" aria-selected="true" data-map="Salem, Tamil Nadu" data-img="assets/images/salem.webp"
+            data-name="Salem main clinic" data-addr="Salem, Tamil Nadu, India" data-ph="+91 9876543210"><b>Salem main
+              clinic</b><span>Full services, lab and pharmacy</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-map="Chennai, Tamil Nadu" data-img="assets/images/chennai.webp" data-link="404.html" data-name="Chennai clinic"
+            data-addr="Chennai, Tamil Nadu, India" data-ph="+91 9876543210"><b>Chennai clinic</b><span>Consultations and
+              diagnostics</span></button>
+        </div>
+        <div class="mapbox" data-aos="fade-left">
+          <div class="mapfit">
+            <img id="map" src="assets/images/salem.webp" alt="Map of the Salem main clinic area" width="718" height="380" loading="lazy" decoding="async">
+            <a class="maphot" id="mHot" href="https://www.google.com/maps/search/?api=1&query=Salem,Tamil+Nadu" target="_blank" rel="noopener" aria-label="Open Salem main clinic in Google Maps"></a>
+          </div>
+          <div class="mapcap"><strong id="mName">Salem main clinic</strong><span id="mAddr">Salem, Tamil Nadu,
+              India</span><a href="https://www.google.com/maps/search/?api=1&query=Salem,Tamil+Nadu" id="mLink"
+              target="_blank" rel="noopener">Get directions</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Hours -->
+    <section class="sec dark" id="hours">
+      <div class="hours-wrap">
+        <div class="head" data-aos="fade-right">
+          <p class="kicker">Opening hours</p>
+        <h2>When we're open.</h2>
+          <p class="lead">Today's row is highlighted. Bars show open hours between 6 am and 10 pm.</p>
+        </div>
+        <ul class="week" data-aos="fade-left">
+          <li data-d="1"><span>Monday</span>
+            <div class="track"><i style="--a:12.5%;--w:81.25%"></i></div><b>8 am – 9 pm</b>
+          </li>
+          <li data-d="2"><span>Tuesday</span>
+            <div class="track"><i style="--a:12.5%;--w:81.25%"></i></div><b>8 am – 9 pm</b>
+          </li>
+          <li data-d="3"><span>Wednesday</span>
+            <div class="track"><i style="--a:12.5%;--w:81.25%"></i></div><b>8 am – 9 pm</b>
+          </li>
+          <li data-d="4"><span>Thursday</span>
+            <div class="track"><i style="--a:12.5%;--w:81.25%"></i></div><b>8 am – 9 pm</b>
+          </li>
+          <li data-d="5"><span>Friday</span>
+            <div class="track"><i style="--a:12.5%;--w:81.25%"></i></div><b>8 am – 9 pm</b>
+          </li>
+          <li data-d="6"><span>Saturday</span>
+            <div class="track"><i style="--a:12.5%;--w:81.25%"></i></div><b>8 am – 9 pm</b>
+          </li>
+          <li data-d="0"><span>Sunday</span>
+            <div class="track"><i style="--a:18.75%;--w:25%"></i></div><b>9 am – 1 pm</b>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. What happens next -->
+    <section class="sec" id="next">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">What's next</p>
+        <h2>What happens after you reach out.</h2>
+      </div>
+      <ol class="flow">
+        <li>
+          <div class="fcard">
+            <span class="ficon" aria-hidden="true"><i class="fas fa-envelope-open-text"></i></span>
+            <span class="ftag">Right away</span>
+            <h3>We read your message</h3>
+            <p>A care coordinator reads it right away and picks the right doctor.</p>
+          </div>
+        </li>
+        <li>
+          <div class="fcard">
+            <span class="ficon" aria-hidden="true"><i class="fas fa-phone-volume"></i></span>
+            <span class="ftag">Within 30 min</span>
+            <h3>We call you back</h3>
+            <p>Within 30 minutes in opening hours, at the time you chose.</p>
+          </div>
+        </li>
+        <li>
+          <div class="fcard">
+            <span class="ficon" aria-hidden="true"><i class="fas fa-calendar-check"></i></span>
+            <span class="ftag">SMS + email</span>
+            <h3>You get a confirmation</h3>
+            <p>Date, doctor and directions arrive by SMS and email.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 7. Emergency -->
+    <section class="sec sos" id="emergency">
+      <div class="sos-text" data-aos="fade-up">
+        <span class="sos-badge"><i class="fas fa-ambulance" aria-hidden="true"></i> Urgent help</span>
+        <h2>Medical emergency?</h2>
+        <p class="lead">Do not wait for a reply. Call 108 for an ambulance, or call our reception for urgent guidance.
+        </p>
+      </div>
+      <div class="sos-actions" data-aos="fade-up" data-aos-delay="100">
+        <a href="404.html" class="btn btn-light"><i class="fas fa-phone-volume"></i> Call 108 </a>
+        <a href="404.html"
+          class="btn btn-ghost-w"><i class="fas fa-headset" aria-hidden="true"></i> Call reception</a>
+        </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-grid">
+      <div class="foot-brand" data-aos="fade-up" data-aos-delay="100"><a href="index.html" class="logo">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+        <p>Calm, clear care for families across Chennai, with doctors, tests and pharmacy in one building.</p>
+        <div class="social">
+          <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fab fa-twitter"></i></a>
+          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Services</h4>
+        <a href="404.html">General Medicine</a>
+        <a href="404.html">Cardiology</a>
+        <a href="404.html">Diagnostics Lab</a>
+        <a href="404.html">Paediatrics</a>
+        <a href="404.html">Physiotherapy</a>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Visit us</h4>
+        <p><i class="fas fa-map-marker-alt"></i>&nbsp; Salem, Tamil Nadu, India</p>
+        <p><i class="fas fa-clock"></i>&nbsp; Mon to Sat, 8 am to 9 pm</p>
+        <p><a href="404.html"><i class="fas fa-phone"></i>&nbsp; +91 9876543210</a></p>
+        <p><a href="404.html"><i class="fas fa-envelope"></i>&nbsp; info@thestackly.com</a></p>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <p>© 2026 Stackly Clinic</p>
+      <div class="foot-legal">
+        <a href="404.html">Terms &amp; Conditions</a>
+        <a href="404.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

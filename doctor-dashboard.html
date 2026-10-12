@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin dashboard | Stackly Clinic</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="d-body" data-role="admin">
+  <div class="d-app">
+    <aside class="d-side" id="side" aria-label="Dashboard menu">
+      <a href="doctor-dashboard.html" class="logo"><img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+      <span class="d-role"><i class="fas fa-user-shield"></i> Admin console</span>
+      <p class="d-side-mail" title="Signed in as"><i class="fas fa-envelope" aria-hidden="true"></i><span id="sideMail">Guest preview</span></p>
+      <nav aria-label="Dashboard sections">
+        <ul class="d-menu">
+          <li><button type="button" class="d-link active" data-view="overview"><i
+                class="fas fa-gauge"></i>Overview</button></li>
+          <li><button type="button" class="d-link" data-view="patients"><i class="fas fa-users"></i>Patients</button>
+          </li>
+          <li><button type="button" class="d-link" data-view="doctors"><i
+                class="fas fa-user-doctor"></i>Doctors</button></li>
+          <li><button type="button" class="d-link" data-view="reports"><i class="fas fa-chart-pie"></i>Reports</button>
+          </li>
+        </ul>
+      </nav>
+      <div class="d-side-foot">
+        <a class="d-link" href="index.html"><i class="fas fa-house"></i>Back to Home</a>
+        <a class="d-link out" href="login.html"><i class="fas fa-right-from-bracket"></i>Logout</a>
+      </div>
+    </aside>
+    <div class="d-scrim" id="scrim"></div>
+
+    <div class="d-main">
+      <header class="d-top">
+        <button type="button" class="d-burger" id="dBurger" aria-label="Open menu" aria-expanded="false"
+          aria-controls="side"><i class="fas fa-bars"></i></button>
+        <p class="d-crumb" id="crumb">Overview</p>
+        <a href="404.html" class="d-bell" aria-label="Notifications"><i class="fas fa-bell"></i><span></span></a>
+        <div class="d-chip" title="Signed in as"><span class="d-av" id="av">G</span><span class="d-mail" id="mail">Guest
+            preview</span></div>
+      </header>
+
+      <main class="d-content">
+        <div class="d-view" id="v-overview">
+          <div class="d-vhead">
+            <div>
+              <h1 class="d-h1">Clinic overview</h1>
+              <p class="d-sub">Today at Stackly Clinic, Wed 7 Oct.</p>
+            </div>
+            <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html"><i class="fas fa-plus"></i>&nbsp; Add
+                appointment</a></div>
+          </div>
+          <div class="d-split">
+            <div class="d-grid">
+              <section class="d-card c12" aria-label="Today in numbers">
+                <div class="d-ch">
+                  <h2 class="d-h2">Today in numbers</h2>
+                </div>
+                <div class="d-kpis">
+                  <div class="kpi"><b data-count="64">64</b><span>Appointments today</span></div>
+                  <div class="kpi"><b data-count="6">6</b><span>New patients</span></div>
+                  <div class="kpi"><b data-count="72" data-prefix="₹" data-suffix="k">₹72k</b><span>Revenue so
+                      far</span></div>
+                  <div class="kpi"><b data-count="6" data-suffix="/8">6/8</b><span>Doctors on duty</span></div>
+                </div>
+              </section>
+              <section class="d-card c7" aria-label="Appointments this week">
+                <div class="d-ch">
+                  <h2 class="d-h2">Appointments this week</h2><a class="btn btn-ghost btn-sm" href="404.html">Full
+                    report</a>
+                </div>
+                <div class="bars" role="img" aria-label="Appointments per day, Monday to Saturday">
+                  <div class="bar">
+                    <div class="col"><i style="--h:72%"></i></div><span>Mon</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:85%"></i></div><span>Tue</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:100%"></i></div><span>Wed</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:78%"></i></div><span>Thu</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:90%"></i></div><span>Fri</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:58%"></i></div><span>Sat</span>
+                  </div>
+                </div>
+              </section>
+              <section class="d-card c5" aria-label="Needs attention">
+                <div class="d-ch">
+                  <h2 class="d-h2">Needs attention</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-vial"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">3 lab reports to sign off</h3>
+                      <p class="d-sub">Diagnostics lab</p>
+                    </div><span class="pill warn">Today</span><a class="btn btn-ghost btn-sm" href="404.html">Review</a>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-clock"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Nair running late</h3>
+                      <p class="d-sub">About 15 minutes</p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Notify</a>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-box"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Pharmacy stock low</h3>
+                      <p class="d-sub">2 items below limit</p>
+                    </div><span class="pill bad">Low</span><a class="btn btn-ghost btn-sm" href="404.html">Reorder</a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <aside class="d-rail" aria-label="More on the clinic overview">
+              <section class="d-card" aria-label="Department load">
+                <div class="d-ch">
+                  <h2 class="d-h2">Department load</h2><span class="pill warn">Lab busy</span>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>General medicine</span><span>82%</span></div>
+                  <div class="meter"><i style="--w:82%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Cardiology</span><span>64%</span></div>
+                  <div class="meter"><i style="--w:64%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Diagnostics lab</span><span>91%</span></div>
+                  <div class="meter"><i style="--w:91%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Paediatrics</span><span>48%</span></div>
+                  <div class="meter"><i style="--w:48%"></i></div>
+                </div>
+              </section>
+              <section class="d-card" aria-label="Up next">
+                <div class="d-ch">
+                  <h2 class="d-h2">Up next</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row">
+                    <div class="d-date"><b>10:30</b><small>am</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Priya Sharma</h3>
+                      <p class="d-sub">Dr. Ananya Rao</p>
+                    </div><span class="pill ok">Checked in</span>
+                  </li>
+                  <li class="d-row">
+                    <div class="d-date"><b>10:45</b><small>am</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Arun Mohan</h3>
+                      <p class="d-sub">Dr. Vikram Nair</p>
+                    </div><span class="pill warn">Waiting</span>
+                  </li>
+                  <li class="d-row">
+                    <div class="d-date"><b>11:00</b><small>am</small></div>
+                    <div class="grow">
+                      <h3 class="d-h3">Lakshmi Raman</h3>
+                      <p class="d-sub">Dr. Karthik Iyer</p>
+                    </div><span class="pill">Booked</span>
+                  </li>
+                </ul>
+                <div class="d-acts"><a class="btn btn-ghost btn-sm" href="404.html">View full queue</a></div>
+              </section>
+            </aside>
+          </div>
+        </div>
+        <div class="d-view" id="v-patients" hidden>
+          <div class="d-vhead">
+            <div>
+              <h1 class="d-h1">Patients</h1>
+              <p class="d-sub">Search records and review new registrations.</p>
+            </div>
+            <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html"><i class="fas fa-user-plus"></i>&nbsp;
+                Add patient</a><a class="btn btn-ghost btn-sm" href="404.html"><i class="fas fa-download"></i>&nbsp;
+                Export</a></div>
+          </div>
+          <div class="d-split">
+            <div class="d-grid">
+              <section class="d-card c12" aria-label="Find a patient">
+                <div class="d-ch">
+                  <h2 class="d-h2">Find a patient</h2>
+                </div>
+                <div class="d-tools">
+                  <div class="d-search"><i class="fas fa-search"></i><label class="sr" for="q"
+                      style="position:absolute;left:-9999px">Search patients</label><input id="q" type="search"
+                      placeholder="Search by name, ID or doctor"></div>
+                </div>
+                <div class="d-kpis">
+                  <div class="kpi"><b data-count="12486">12,486</b><span>Total patients</span></div>
+                  <div class="kpi"><b data-count="1240">1,240</b><span>Active this month</span></div>
+                  <div class="kpi"><b data-count="64">64</b><span>Follow-ups due</span></div>
+                </div>
+              </section>
+              <section class="d-card c8" aria-label="Patient list">
+                <div class="d-ch">
+                  <h2 class="d-h2">Patient list</h2>
+                </div>
+                <div class="scroll" tabindex="0">
+                  <table class="d-table" id="ptable">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Doctor</th>
+                        <th>Last visit</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>P-10482</td>
+                        <td><b>Priya Sharma</b></td>
+                        <td>Dr. Ananya Rao</td>
+                        <td>23 Sep</td>
+                        <td><span class="pill ok">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>P-10391</td>
+                        <td><b>Arun Mohan</b></td>
+                        <td>Dr. Vikram Nair</td>
+                        <td>22 Sep</td>
+                        <td><span class="pill warn">Follow-up</span></td>
+                      </tr>
+                      <tr>
+                        <td>P-10277</td>
+                        <td><b>Lakshmi Raman</b></td>
+                        <td>Dr. Karthik Iyer</td>
+                        <td>20 Sep</td>
+                        <td><span class="pill ok">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>P-10190</td>
+                        <td><b>Suresh Kumar</b></td>
+                        <td>Dr. Ananya Rao</td>
+                        <td>18 Sep</td>
+                        <td><span class="pill ok">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>P-10088</td>
+                        <td><b>Meena Iyer</b></td>
+                        <td>Dr. Karthik Iyer</td>
+                        <td>12 Sep</td>
+                        <td><span class="pill warn">Follow-up</span></td>
+                      </tr>
+                      <tr>
+                        <td>P-09974</td>
+                        <td><b>Rahul Varma</b></td>
+                        <td>Dr. Vikram Nair</td>
+                        <td>2 Sep</td>
+                        <td><span class="pill ">Inactive</span></td>
+                      </tr>
+                      <tr>
+                        <td>P-09851</td>
+                        <td><b>Divya Nair</b></td>
+                        <td>Dr. Ananya Rao</td>
+                        <td>30 Aug</td>
+                        <td><span class="pill ok">Active</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section class="d-card c4" aria-label="Pending approvals">
+                <div class="d-ch">
+                  <h2 class="d-h2">Pending approvals</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row">
+                    <div class="grow">
+                      <h3 class="d-h3">Kavya Menon</h3>
+                      <p class="d-sub">Registered today</p>
+                    </div>
+                    <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html">Approve</a><a
+                        class="btn btn-ghost btn-sm" href="404.html">Reject</a></div>
+                  </li>
+                  <li class="d-row">
+                    <div class="grow">
+                      <h3 class="d-h3">Imran Ali</h3>
+                      <p class="d-sub">Registered today</p>
+                    </div>
+                    <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html">Approve</a><a
+                        class="btn btn-ghost btn-sm" href="404.html">Reject</a></div>
+                  </li>
+                  <li class="d-row">
+                    <div class="grow">
+                      <h3 class="d-h3">Sneha Pillai</h3>
+                      <p class="d-sub">Registered yesterday</p>
+                    </div>
+                    <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html">Approve</a><a
+                        class="btn btn-ghost btn-sm" href="404.html">Reject</a></div>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <aside class="d-rail" aria-label="More on patients">
+              <section class="d-card" aria-label="New registrations">
+                <div class="d-ch">
+                  <h2 class="d-h2">New registrations</h2>
+                </div>
+                <div class="bars" role="img" aria-label="New registrations per day, Monday to Saturday">
+                  <div class="bar">
+                    <div class="col"><i style="--h:67%"></i></div><span>Mon</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:92%"></i></div><span>Tue</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:50%"></i></div><span>Wed</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:75%"></i></div><span>Thu</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:100%"></i></div><span>Fri</span>
+                  </div>
+                  <div class="bar">
+                    <div class="col"><i style="--h:42%"></i></div><span>Sat</span>
+                  </div>
+                </div>
+                <p class="d-sub" style="margin-top:.9rem">51 new patients this week.</p>
+              </section>
+              <section class="d-card" aria-label="Patient mix by age">
+                <div class="d-ch">
+                  <h2 class="d-h2">Patient mix by age</h2>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Children, 0 to 12</span><span>18%</span></div>
+                  <div class="meter"><i style="--w:18%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Young adults, 13 to 35</span><span>31%</span></div>
+                  <div class="meter"><i style="--w:31%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Adults, 36 to 60</span><span>34%</span></div>
+                  <div class="meter"><i style="--w:34%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Seniors, 60+</span><span>17%</span></div>
+                  <div class="meter"><i style="--w:17%"></i></div>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </div>
+        <div class="d-view" id="v-doctors" hidden>
+          <div class="d-vhead">
+            <div>
+              <h1 class="d-h1">Doctors</h1>
+              <p class="d-sub">Who is on duty and when.</p>
+            </div>
+            <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html"><i class="fas fa-user-plus"></i>&nbsp;
+                Add doctor</a></div>
+          </div>
+          <div class="d-split">
+            <div class="d-grid">
+              <section class="d-card c12" aria-label="On duty now">
+                <div class="d-ch">
+                  <h2 class="d-h2">On duty now</h2>
+                </div>
+                <div class="d-people">
+                  <div class="d-person"><img class="d-ph"
+                      src="assets/images/doctor-1.webp"
+                      alt="Dr. Ananya Rao">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Ananya Rao</h3>
+                      <p class="d-sub">Internal medicine, 9 patients</p>
+                      <p style="margin-top:.3rem"><span class="pill ok">On duty</span></p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Profile</a>
+                  </div>
+                  <div class="d-person"><img class="d-ph"
+                      src="assets/images/doctor-2.webp"
+                      alt="Dr. Karthik Iyer">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Karthik Iyer</h3>
+                      <p class="d-sub">Cardiologist, 7 patients</p>
+                      <p style="margin-top:.3rem"><span class="pill warn">In consult</span></p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Profile</a>
+                  </div>
+                  <div class="d-person"><img class="d-ph"
+                      src="assets/images/doctor-3.webp"
+                      alt="Dr. Vikram Nair">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Vikram Nair</h3>
+                      <p class="d-sub">Paediatrics, 8 patients</p>
+                      <p style="margin-top:.3rem"><span class="pill ok">On duty</span></p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Profile</a>
+                  </div>
+                </div>
+              </section>
+              <section class="d-card c8" aria-label="Weekly schedule">
+                <div class="d-ch">
+                  <h2 class="d-h2">Weekly schedule</h2><a class="btn btn-ghost btn-sm" href="404.html">Edit rota</a>
+                </div>
+                <div class="scroll" tabindex="0">
+                  <div class="sched">
+                    <div class="h who">Doctor</div>
+                    <div class="h">Mon</div>
+                    <div class="h">Tue</div>
+                    <div class="h">Wed</div>
+                    <div class="h">Thu</div>
+                    <div class="h">Fri</div>
+                    <div class="h">Sat</div>
+                    <div class="who">Dr. Ananya Rao</div>
+                    <div class="am">AM</div>
+                    <div class="am">AM</div>
+                    <div class="pm">PM</div>
+                    <div class="am">AM</div>
+                    <div class="pm">PM</div>
+                    <div class="off">Off</div>
+                    <div class="who">Dr. Karthik Iyer</div>
+                    <div class="pm">PM</div>
+                    <div class="am">AM</div>
+                    <div class="am">AM</div>
+                    <div class="off">Off</div>
+                    <div class="am">AM</div>
+                    <div class="am">AM</div>
+                    <div class="who">Dr. Vikram Nair</div>
+                    <div class="am">AM</div>
+                    <div class="off">Off</div>
+                    <div class="pm">PM</div>
+                    <div class="pm">PM</div>
+                    <div class="am">AM</div>
+                    <div class="am">AM</div>
+                    <div class="who">Dr. Meera Das</div>
+                    <div class="off">Off</div>
+                    <div class="pm">PM</div>
+                    <div class="am">AM</div>
+                    <div class="am">AM</div>
+                    <div class="pm">PM</div>
+                    <div class="pm">PM</div>
+                  </div>
+                </div>
+              </section>
+              <section class="d-card c4" aria-label="Leave requests">
+                <div class="d-ch">
+                  <h2 class="d-h2">Leave requests</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Meera Das</h3>
+                      <p class="d-sub">14 to 16 Oct</p>
+                    </div>
+                    <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html">Approve</a><a
+                        class="btn btn-ghost btn-sm" href="404.html">Decline</a></div>
+                  </li>
+                  <li class="d-row">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Vikram Nair</h3>
+                      <p class="d-sub">24 Oct</p>
+                    </div>
+                    <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html">Approve</a><a
+                        class="btn btn-ghost btn-sm" href="404.html">Decline</a></div>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <aside class="d-rail" aria-label="More on doctors">
+              <section class="d-card" aria-label="Team snapshot">
+                <div class="d-ch">
+                  <h2 class="d-h2">Team snapshot</h2>
+                </div>
+                <div class="d-kpis">
+                  <div class="kpi"><b data-count="6">6</b><span>On duty today</span></div>
+                  <div class="kpi"><b data-count="2">2</b><span>Leave requests</span></div>
+                  <div class="kpi"><b data-count="8">8</b><span>Doctors in total</span></div>
+                  <div class="kpi"><b data-count="9">9</b><span>Avg. patients each</span></div>
+                </div>
+              </section>
+              <section class="d-card" aria-label="Top rated doctors">
+                <div class="d-ch">
+                  <h2 class="d-h2">Top rated doctors</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row"><img class="d-ph"
+                      src="assets/images/doctor-3.webp"
+                      alt="Dr. Vikram Nair">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Vikram Nair</h3>
+                      <p class="d-sub"><i class="fas fa-star d-star" aria-hidden="true"></i> 4.9 &middot; 312 reviews
+                      </p>
+                    </div>
+                  </li>
+                  <li class="d-row"><img class="d-ph"
+                      src="assets/images/doctor-1.webp"
+                      alt="Dr. Ananya Rao">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Ananya Rao</h3>
+                      <p class="d-sub"><i class="fas fa-star d-star" aria-hidden="true"></i> 4.8 &middot; 286 reviews
+                      </p>
+                    </div>
+                  </li>
+                  <li class="d-row"><img class="d-ph"
+                      src="assets/images/doctor-2.webp"
+                      alt="Dr. Karthik Iyer">
+                    <div class="grow">
+                      <h3 class="d-h3">Dr. Karthik Iyer</h3>
+                      <p class="d-sub"><i class="fas fa-star d-star" aria-hidden="true"></i> 4.8 &middot; 241 reviews
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </div>
+        <div class="d-view" id="v-reports" hidden>
+          <div class="d-vhead">
+            <div>
+              <h1 class="d-h1">Reports</h1>
+              <p class="d-sub">Revenue, quality and exports.</p>
+            </div>
+            <div class="d-acts"><a class="btn btn-teal btn-sm" href="404.html"><i class="fas fa-file-lines"></i>&nbsp;
+                Generate report</a></div>
+          </div>
+          <div class="d-split">
+            <div class="d-grid">
+              <section class="d-card c7" aria-label="Revenue by service">
+                <div class="d-ch">
+                  <h2 class="d-h2">Revenue by service</h2><a class="btn btn-ghost btn-sm" href="404.html">This month</a>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>General medicine</span><span>₹6.9L</span></div>
+                  <div class="meter"><i style="--w:38%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Cardiology</span><span>₹4.9L</span></div>
+                  <div class="meter"><i style="--w:27%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Diagnostics lab</span><span>₹3.8L</span></div>
+                  <div class="meter"><i style="--w:21%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Paediatrics</span><span>₹2.5L</span></div>
+                  <div class="meter"><i style="--w:14%"></i></div>
+                </div>
+              </section>
+              <section class="d-card c5" aria-label="Patient satisfaction">
+                <div class="d-ch">
+                  <h2 class="d-h2">Patient satisfaction</h2>
+                </div>
+                <div class="kpi" style="margin-bottom:1.1rem"><b data-count="4.9" data-dec="1"
+                    data-suffix="/5">4.9/5</b><span>Average from 1,200 reviews</span></div>
+                <div class="m-row">
+                  <div class="m-top"><span>Seen within 10 minutes</span><span>92%</span></div>
+                  <div class="meter"><i style="--w:92%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Would recommend us</span><span>98%</span></div>
+                  <div class="meter"><i style="--w:98%"></i></div>
+                </div>
+                <div class="m-row">
+                  <div class="m-top"><span>Follow-up completed</span><span>87%</span></div>
+                  <div class="meter"><i style="--w:87%"></i></div>
+                </div>
+              </section>
+              <section class="d-card c12" aria-label="Downloads">
+                <div class="d-ch">
+                  <h2 class="d-h2">Downloads</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-file-pdf"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Monthly revenue summary</h3>
+                      <p class="d-sub">September 2026, PDF</p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Download</a>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-file-csv"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Appointment log</h3>
+                      <p class="d-sub">Last 30 days, CSV</p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Download</a>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-file-pdf"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Lab turnaround times</h3>
+                      <p class="d-sub">Q3 2026, PDF</p>
+                    </div><a class="btn btn-ghost btn-sm" href="404.html">Download</a>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <aside class="d-rail" aria-label="More on reports">
+              <section class="d-card" aria-label="Scheduled reports">
+                <div class="d-ch">
+                  <h2 class="d-h2">Scheduled reports</h2>
+                </div>
+                <ul class="d-list">
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-envelope"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Weekly summary email</h3>
+                      <p class="d-sub">Every Monday, 8 am</p>
+                    </div><span class="pill ok">On</span>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-file-pdf"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Monthly revenue PDF</h3>
+                      <p class="d-sub">1st of each month</p>
+                    </div><span class="pill ok">On</span>
+                  </li>
+                  <li class="d-row"><span class="d-ico"><i class="fas fa-file-csv"></i></span>
+                    <div class="grow">
+                      <h3 class="d-h3">Lab turnaround CSV</h3>
+                      <p class="d-sub">Every quarter</p>
+                    </div><span class="pill warn">Paused</span>
+                  </li>
+                </ul>
+                <div class="d-acts"><a class="btn btn-ghost btn-sm" href="404.html">Manage schedules</a></div>
+              </section>
+              <section class="d-card" aria-label="Operations snapshot">
+                <div class="d-ch">
+                  <h2 class="d-h2">Operations snapshot</h2>
+                </div>
+                <div class="d-kpis">
+                  <div class="kpi"><b data-count="9" data-suffix=" min">9 min</b><span>Avg. wait time</span></div>
+                  <div class="kpi"><b data-count="94" data-suffix="%">94%</b><span>Lab reports on time</span></div>
+                  <div class="kpi"><b data-count="2.1" data-dec="1" data-suffix="%">2.1%</b><span>No-show rate</span>
+                  </div>
+                  <div class="kpi"><b data-count="18">18</b><span>Complaints resolved</span></div>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </div>
+      
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

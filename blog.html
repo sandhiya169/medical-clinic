@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | Stackly Clinic</title>
+  <meta name="description"
+    content="Short, doctor-written health reads from Stackly Clinic: heart health, children's care, tests and everyday wellbeing.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+
+<body>
+  <div class="preloader" id="preloader" role="status" aria-live="polite">
+    <div class="preloader-inner">
+      <div class="preloader-mark" aria-hidden="true">+</div>
+      <div class="preloader-name">Stackly</div>
+      <div class="preloader-bar" aria-hidden="true"><span></span></div>
+      <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Loading…</span>
+    </div>
+  </div>
+  <noscript><style>.preloader{display:none!important}</style></noscript>
+  <script src="assets/js/preloader.js"></script>
+  <header class="nav" id="nav">
+    <a href="index.html" class="logo">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+    <nav id="menu" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html" class="active" aria-current="page">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn btn-teal menu-cta"><i class="fas fa-arrow-right-to-bracket" aria-hidden="true"></i> Login</a>
+    </nav>
+    <a href="login.html" class="btn btn-teal nav-cta"><i class="fas fa-arrow-right-to-bracket" aria-hidden="true"></i> Login</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="bl-hero" id="top">
+      <div class="bl-hero-text">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span
+            aria-current="page">Blog</span></nav>
+        <p class="kicker" data-aos="fade-up" data-aos-delay="400">Fresh from the clinic</p>
+        <h1>Health advice in <span class="mark">plain language.</span></h1>
+        <p class="lead">Short reads written by our doctors on heart health, children's care, tests and everyday
+          wellbeing.</p>
+        <div class="hero-actions">
+          <a href="#articles" class="btn btn-teal"><i class="fas fa-newspaper" aria-hidden="true"></i> Browse
+            topics</a>
+          <a href="contact.html" class="btn btn-ghost"><i class="fas fa-user-doctor" aria-hidden="true"></i> Ask a
+            doctor</a>
+        </div>
+        <ul class="trust">
+          <li><i class="fas fa-user-doctor" aria-hidden="true"></i><b>Doctor-written</b></li>
+          <li><i class="fas fa-book-open" aria-hidden="true"></i><b>5 min reads</b></li>
+          <li><i class="fas fa-calendar-check" aria-hidden="true"></i><b>New every week</b></li>
+        </ul>
+      </div>
+      <div class="bl-hero-media">
+        <span class="b-ring" aria-hidden="true"></span>
+        <div class="arch"><img
+            src="assets/images/image-4.webp"
+            alt="Doctor at Stackly Clinic reading a question from a patient"></div>
+        <a href="#articles" class="float-card b-feature">
+          <span class="bl-tag">Cardiology</span>
+          <strong>Five signs your blood pressure needs a check</strong>
+          <small>5 min read</small>
+        </a>
+        <div class="float-chip"><i class="fas fa-pen-nib" aria-hidden="true"></i> New reads every week</div>
+      </div>
+    </section>
+
+    <!-- 2. Featured -->
+    <section class="sec bl-feat" id="featured">
+      <figure class="bl-par bl-feat-img" data-aos="fade-right">
+        <img src="assets/images/annual-health-checkup.webp"
+          alt="Calm consultation room at Stackly Clinic">
+        <figcaption class="bl-tag">General medicine</figcaption>
+      </figure>
+      <div class="bl-feat-text" data-aos="fade-left">
+        <p class="kicker">Featured read</p>
+        <h2>A simple guide to your annual health check.</h2>
+        <p class="lead">Which tests are worth doing each year, what to bring and the questions to ask, so you leave
+          with a plan instead of a pile of reports.</p>
+        <ul class="bl-points" aria-label="What the guide covers">
+          <li><i class="fas fa-vial" aria-hidden="true"></i> Tests worth doing</li>
+          <li><i class="fas fa-folder-open" aria-hidden="true"></i> What to bring</li>
+          <li><i class="fas fa-circle-question" aria-hidden="true"></i> Questions to ask</li>
+        </ul>
+        <div class="bl-author">
+          <span class="bl-avatar"><img
+              src="assets/images/doctor-1.webp"
+              alt="Dr. Ananya Rao"></span>
+          <span><b>Dr. Ananya Rao</b><small>2 Oct 2026, 7 min read</small></span>
+        </div>
+        <a href="404.html" class="btn btn-teal">Read article <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <!-- 3. Article grid with filter + sort -->
+    <section class="sec tint" id="articles">
+      <div class="head" data-aos="fade-up">
+        <p class="kicker">Latest articles</p>
+        <h2>Browse by topic.</h2>
+      </div>
+      <div class="bl-tools" data-aos="fade-up">
+        <div class="bl-filters" role="group" aria-label="Filter by topic">
+          <button class="on" data-cat="all" aria-pressed="true">All</button>
+          <button data-cat="General medicine" aria-pressed="false">General medicine</button>
+          <button data-cat="Cardiology" aria-pressed="false">Cardiology</button>
+          <button data-cat="Paediatrics" aria-pressed="false">Paediatrics</button>
+          <button data-cat="Diagnostics" aria-pressed="false">Diagnostics</button>
+        </div>
+        <label class="bl-sort"><span class="bl-sort-l">Sort by</span>
+          <select id="sort">
+            <option value="default">Featured order</option>
+            <option value="short">Shortest read first</option>
+            <option value="long">Longest read first</option>
+          </select><i class="fas fa-chevron-down" aria-hidden="true"></i></label>
+      </div>
+      <p class="bl-count" id="count" aria-live="polite">6 articles</p>
+      <ul class="bl-grid" id="grid">
+        <li class="bl-card" data-cat="Cardiology" data-aos="fade-up">
+          <a class="bl-card-in" href="404.html">
+            <div class="bl-card-img"><img
+                src="assets/images/cardiology.webp"
+                alt="Doctor checking a patient"><span class="bl-tag">Cardiology</span></div>
+            <div class="bl-card-body">
+              <h3>Five signs your blood pressure needs a check</h3>
+              <p>High blood pressure is often silent. Here is when a quick check is worth booking.</p>
+              <div class="bl-by"><span>Dr. Karthik Iyer</span><span>5 min read</span></div>
+            </div>
+            <span class="bl-more" aria-hidden="true">Read article <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </li>
+        <li class="bl-card" data-cat="Diagnostics" data-aos="fade-up" data-aos-delay="100">
+          <a class="bl-card-in" href="404.html">
+            <div class="bl-card-img"><img
+                src="assets/images/lab.webp"
+                alt="Laboratory technician"><span class="bl-tag">Diagnostics</span></div>
+            <div class="bl-card-body">
+              <h3>How to read your blood test report</h3>
+              <p>What the common markers mean, and which results are worth asking your doctor about.</p>
+              <div class="bl-by"><span>Dr. Ananya Rao</span><span>6 min read</span></div>
+            </div>
+            <span class="bl-more" aria-hidden="true">Read article <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </li>
+        <li class="bl-card" data-cat="Paediatrics" data-aos="fade-up" data-aos-delay="200">
+          <a class="bl-card-in" href="404.html">
+            <div class="bl-card-img"><img
+                src="assets/images/paediatrions.webp"
+                alt="Paediatrician Dr. Vikram Nair"><span class="bl-tag">Paediatrics</span></div>
+            <div class="bl-card-body">
+              <h3>Fever in children: when to wait, when to call</h3>
+              <p>A calm checklist for parents, from temperature to behaviour.</p>
+              <div class="bl-by"><span>Dr. Vikram Nair</span><span>4 min read</span></div>
+            </div>
+            <span class="bl-more" aria-hidden="true">Read article <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </li>
+        <li class="bl-card" data-cat="General medicine" data-aos="fade-up">
+          <a class="bl-card-in" href="404.html">
+            <div class="bl-card-img"><img
+                src="assets/images/general.webp"
+                alt="General physician consultation"><span class="bl-tag">General medicine</span></div>
+            <div class="bl-card-body">
+              <h3>Living well with type 2 diabetes: daily habits that help</h3>
+              <p>Meals, movement and monitoring, and when to see your doctor for a review.</p>
+              <div class="bl-by"><span>Dr. Ananya Rao</span><span>5 min read</span></div>
+            </div>
+            <span class="bl-more" aria-hidden="true">Read article <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </li>
+        <li class="bl-card" data-cat="General medicine" data-aos="fade-up" data-aos-delay="100">
+          <a class="bl-card-in" href="404.html">
+            <div class="bl-card-img"><img
+                src="assets/images/fever.webp"
+                alt="Bright clinic corridor"><span class="bl-tag">General medicine</span></div>
+            <div class="bl-card-body">
+              <h3>Monsoon fevers: what to watch for</h3>
+              <p>Simple habits that lower your risk, and signs that mean you should not wait.</p>
+              <div class="bl-by"><span>Dr. Ananya Rao</span><span>5 min read</span></div>
+            </div>
+            <span class="bl-more" aria-hidden="true">Read article <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </li>
+        <li class="bl-card" data-cat="Cardiology" data-aos="fade-up" data-aos-delay="200">
+          <a class="bl-card-in" href="404.html">
+            <div class="bl-card-img"><img
+                src="assets/images/ecg.webp"
+                alt="Heart and imaging scan"><span class="bl-tag">Cardiology</span></div>
+            <div class="bl-card-body">
+              <h3>ECG, echo or treadmill: which test do you need?</h3>
+              <p>The three most common heart tests, explained side by side.</p>
+              <div class="bl-by"><span>Dr. Karthik Iyer</span><span>6 min read</span></div>
+            </div>
+            <span class="bl-more" aria-hidden="true">Read article <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </li>
+      </ul>
+      <p class="bl-empty" id="empty" hidden>No articles in this topic yet. Try another topic.</p>
+    </section>
+
+    <!-- 4. Quick reads strip -->
+    <section class="sec dark bl-quick" id="quick">
+      <div class="bl-quick-head">
+        <div data-aos="fade-up">
+          <p class="kicker">Quick tips</p>
+          <h2>Quick reads for busy days.</h2>
+          <p class="lead">Five small habits our doctors recommend most often.</p>
+        </div>
+        <div class="bl-arrows">
+          <button id="prev" aria-label="Previous tip"><i class="fas fa-arrow-left"></i></button>
+          <button id="next" aria-label="Next tip"><i class="fas fa-arrow-right"></i></button>
+          <button id="play" class="bl-play" aria-label="Pause scrolling" aria-pressed="false"><i class="fas fa-pause"></i></button>
+        </div>
+      </div>
+      <div class="bl-strip" id="strip" tabindex="0" aria-label="Quick health tips">
+        <article class="bl-tip"><i class="fas fa-person-walking"></i>
+          <h3>Walk 30 minutes, most days</h3>
+          <p>Brisk walking supports your heart, your sleep and your mood.</p>
+        </article>
+        <article class="bl-tip"><i class="fas fa-heart-pulse"></i>
+          <h3>Check your pressure at home</h3>
+          <p>Sit and rest for five minutes, then take two readings and note them down.</p>
+        </article>
+        <article class="bl-tip"><i class="fas fa-vial"></i>
+          <h3>Fasting before blood tests</h3>
+          <p>Usually 8 to 10 hours, and water is fine. Ask us if you take regular medicines.</p>
+        </article>
+        <article class="bl-tip"><i class="fas fa-droplet"></i>
+          <h3>Drink enough water</h3>
+          <p>Two to three litres a day suits most adults, unless your doctor has advised a limit.</p>
+        </article>
+        <article class="bl-tip"><i class="fas fa-syringe"></i>
+          <h3>Keep vaccines on schedule</h3>
+          <p>Ask your paediatrician for your child's vaccination chart.</p>
+        </article>
+      </div>
+      <div class="bl-bar" aria-hidden="true"><i id="bar"></i></div>
+    </section>
+
+    <!-- 5. Know your numbers -->
+    <section class="sec bl-nums" id="numbers">
+      <div class="bl-nums-intro" data-aos="fade-right">
+        <p class="kicker">Health numbers</p>
+        <h2>Know your numbers.</h2>
+        <p class="lead">Four readings worth tracking. The teal band shows the usual healthy range for adults.</p>
+        <p class="bl-note"><i class="fas fa-circle-info" aria-hidden="true"></i> General reference only. Your doctor
+          may set different targets for you.</p>
+      </div>
+      <ul class="bl-gauges">
+        <li class="bl-gauge" data-aos="fade-left">
+          <div class="bl-g-top">
+            <h3>Blood pressure</h3><b>Below 120/80 mmHg</b>
+          </div>
+          <div class="bl-track"><i class="bl-zone" style="--s:0%;--w:40%"></i></div>
+          <div class="bl-scale"><span>80</span><span>180 (top number)</span></div>
+        </li>
+        <li class="bl-gauge" data-aos="fade-left">
+          <div class="bl-g-top">
+            <h3>Fasting blood sugar</h3><b>70 to 99 mg/dL</b>
+          </div>
+          <div class="bl-track"><i class="bl-zone" style="--s:13.3%;--w:19.3%"></i></div>
+          <div class="bl-scale"><span>50</span><span>200</span></div>
+        </li>
+        <li class="bl-gauge" data-aos="fade-left">
+          <div class="bl-g-top">
+            <h3>LDL cholesterol</h3><b>Below 100 mg/dL</b>
+          </div>
+          <div class="bl-track"><i class="bl-zone" style="--s:0%;--w:50%"></i></div>
+          <div class="bl-scale"><span>0</span><span>200</span></div>
+        </li>
+        <li class="bl-gauge" data-aos="fade-left">
+          <div class="bl-g-top">
+            <h3>Resting heart rate</h3><b>60 to 100 bpm</b>
+          </div>
+          <div class="bl-track"><i class="bl-zone" style="--s:20%;--w:40%"></i></div>
+          <div class="bl-scale"><span>40</span><span>140</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 6. Newsletter -->
+    <section class="sec tint bl-news" id="news">
+      <div class="bl-news-card" data-aos="zoom-in">
+        <i class="fas fa-envelope-open-text bl-news-ico" aria-hidden="true"></i>
+        <div>
+          <p class="kicker">Newsletter</p>
+          <h2>One useful read, every week.</h2>
+          <p class="lead">Get our latest article in your inbox. No spam, and you can unsubscribe any time.</p>
+        </div>
+        <form id="newsForm" novalidate>
+          <label>Email address<input type="email" name="email" autocomplete="email" required
+              placeholder="you@example.com"></label>
+          <button class="btn btn-teal" type="submit">Subscribe</button>
+          <p class="msg" id="newsMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 7. CTA -->
+    <section class="bl-cta-sec" id="visit">
+      <div class="bl-cta" data-aos="fade-up">
+        <svg class="bl-cta-ecg" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+          <path id="ctaEcg"
+            d="M0 40 H300 L330 40 345 10 365 70 385 25 400 40 H650 L675 40 690 5 712 75 732 30 748 40 H1200"
+            fill="none" stroke="#fff" stroke-width="3" />
+        </svg>
+        <p class="kicker">Visit us</p>
+        <h2>Prefer to ask in person?</h2>
+        <p class="lead">Book a visit and talk it through with one of our doctors. We confirm within 30 minutes during
+          opening hours.</p>
+        <div class="hero-actions"><a href="404.html" class="btn btn-light"><i class="fas fa-calendar-check"></i>&nbsp; Book appointment</a><a href="contact.html"
+            class="btn btn-ghost-light">Contact us &nbsp;<i class="fas fa-arrow-right"></i></a></div> 
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-grid">
+      <div class="foot-brand" data-aos="fade-up" data-aos-delay="100"><a href="index.html" class="logo">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly Logo" class="logo-img"></a>
+        <p>Calm, clear care for families across Chennai, with doctors, tests and pharmacy in one building.</p>
+        <div class="social">
+          <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fab fa-twitter"></i></a>
+          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+          <a href="404.html"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Services</h4>
+        <a href="404.html">General Medicine</a>
+        <a href="404.html">Cardiology</a>
+        <a href="404.html">Diagnostics Lab</a>
+        <a href="404.html">Paediatrics</a>
+        <a href="404.html">Physiotherapy</a>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <h4>Visit us</h4>
+        <p><i class="fas fa-map-marker-alt"></i>&nbsp; Salem, Tamil Nadu, India</p>
+        <p><i class="fas fa-clock"></i>&nbsp; Mon to Sat, 8 am to 9 pm</p>
+        <p><a href="404.html"><i class="fas fa-phone"></i>&nbsp; +91 9876543210</a></p>
+        <p><a href="404.html"><i class="fas fa-envelope"></i>&nbsp; info@thestackly.com</a></p>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <p>© 2026 Stackly Clinic</p>
+      <div class="foot-legal">
+        <a href="404.html">Terms &amp; Conditions</a>
+        <a href="404.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/blog.js"></script>
+</body>
+
+</html>
