@@ -1,4 +1,4 @@
-/* Login + Signup: builds on tokens and components in style.css */
+
 .au {
     --p: 3.5rem;
     display: grid;
@@ -456,7 +456,7 @@
 }
 
 
-/* ---------- Fixed-value responsive overrides (replaces clamp()) ---------- */
+
 @media(max-width:1100px) {
     .au { --p: 2.45rem }
     .au-brand h1 { font-size: 2.15rem }

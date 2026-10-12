@@ -1,4 +1,4 @@
-/* 404 page: uses tokens and shared components from style.css */
+
 
 .nf {
     position: relative;
@@ -226,8 +226,6 @@
 
 }
 
-
-/* ---------- Fixed-value responsive overrides (replaces clamp()) ---------- */
 @media(max-width:860px) {
     .mon-code { font-size: 8.6rem }
 }

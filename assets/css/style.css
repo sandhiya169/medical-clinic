@@ -1,8 +1,8 @@
 :root {
-    --navy: #0F4C5C;      /* Secondary / Deep Teal */
-    --teal: #1FA2A6;      /* Primary */
-    --mint: #EEF7F6;      /* Soft Background */
-    --ink: #17323F;       /* Main Text */
+    --navy: #0F4C5C;      
+    --teal: #1FA2A6;      
+    --mint: #EEF7F6;     
+    --ink: #17323F;       
     --r: 28px;
     --pad: max(1.25rem, calc((100% - 1240px) / 2));
 
@@ -391,7 +391,7 @@ section.hero {
     pointer-events: none
 }
 
-/* Taller than the hero so the scroll parallax (main.js) never shows an edge */
+
 .hero-bg img {
     position: absolute;
     left: 0;
@@ -402,7 +402,7 @@ section.hero {
     object-position: center
 }
 
-/* Deep teal overlay: solid behind the text, lighter toward the right */
+
 .hero-bg::after {
     content: "";
     position: absolute;
@@ -428,7 +428,7 @@ section.hero {
     -webkit-backdrop-filter: blur(6px)
 }
 
-/* Live "open" dot */
+
 .hero .kicker::before {
     content: "";
     width: 9px;
@@ -481,7 +481,7 @@ section.hero {
     font-size: .68rem
 }
 
-/* Right-side photo: arch with a soft glow and an offset outline behind it */
+
 section.hero .hero-media {
     grid-area: media;
     justify-self: end;
@@ -569,7 +569,7 @@ section.hero .hero-media {
 
 .hb-avatars img+img { margin-left: -14px }
 
-/* ----- Navbar: white text while it sits on top of the dark hero (home page only) ----- */
+
 .home .nav:not(.solid) .logo,
 .home .nav:not(.solid) .burger span { color: #fff }
 .home .nav:not(.solid) .burger span { background: #fff }
@@ -1028,7 +1028,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .book form { padding: 2rem }
 }
 
-/* Single column from 860px (see the shared rule further down); keep the fields 2-up while they have room */
+
 @media(max-width:860px) {
     .book-info { grid-template-columns: repeat(2, auto); justify-content: start; gap: 1.1rem 2.4rem; margin-top: 1.8rem }
 }
@@ -1182,7 +1182,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: .9rem
 }
 
-/* ---------- Reviews: heading + rating + controls on the left, one large quote on the right ---------- */
+
 .rev {
     display: grid;
     grid-template-columns: .85fr 1.15fr;
@@ -1246,7 +1246,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .rev-arrow:hover { background: var(--teal); border-color: var(--teal); color: #fff }
 .rev-arrow:focus-visible, .dots button:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px }
 
-/* Dots: the active one fills over 6s, matching the autoplay interval in main.js */
+
 .dots { display: flex; gap: .5rem; margin: 0 0 0 .7rem }
 
 .dots button {
@@ -1802,7 +1802,7 @@ html.is-loading body {
 }
 
 
-/* ---------- Fixed-value responsive overrides (replaces clamp()) ---------- */
+
 @media(max-width:1100px) {
     h1 { font-size: 3.7rem }
     h2 { font-size: 2.35rem }
@@ -1820,7 +1820,7 @@ html.is-loading body {
 }
 
 
-/* ---------- Home: About section (ix- classes are used on index.html only) ---------- */
+/* ---------- Home---------- */
 #services.sec { padding-bottom: 5rem }
 
 /* Tinted band so the section reads as separate from the white Services block above */
@@ -1951,7 +1951,7 @@ html.is-loading body {
     .ix-actions .btn { flex: 1 1 100%; text-align: center }
 }
 
-/* ---------- Home: Doctors section (dr- classes are used on index.html only) ---------- */
+/* ---------- Home ---------- */
 .sec.dr {
     position: relative;
     overflow: hidden
@@ -2167,7 +2167,7 @@ html.is-loading body {
     .dr-avail { justify-content: center }
 }
 
-/* ---------- Home: Visit steps (vs- classes are used on index.html only) ---------- */
+/* ---------- Home ---------- */
 .vs-head {
     display: grid;
     grid-template-columns: 1.2fr .8fr;
@@ -2196,11 +2196,11 @@ html.is-loading body {
 
 .vs-head .lead { margin: 0 0 1.3rem }
 
-/* Soft mint background so this section stands apart from the white services section above */
+
 .vs { background: var(--mint) }
 .vs .kicker { background: #fff; box-shadow: 0 6px 18px rgba(10, 42, 67, .06) }
 
-/* Steps: editorial 2 x 2 list (1fr 1fr). Big numeral, title + text, icon at the end. No cards. */
+
 .vs-steps {
     list-style: none;
     counter-reset: vs;
@@ -2226,7 +2226,7 @@ html.is-loading body {
 .vs-card:nth-last-child(-n+2) { border-bottom: 1px solid rgba(15, 76, 92, .16) }
 .vs-card:hover { border-top-color: var(--teal) }
 
-/* The original digit is replaced by a two-digit counter */
+
 .vs-no {
     grid-area: no;
     align-self: start;
@@ -2245,7 +2245,7 @@ html.is-loading body {
 
 .vs-card:hover .vs-no::before { color: var(--teal) }
 
-/* Let the title, text and icon sit directly in the card's grid */
+
 .vs-box { display: contents }
 
 .vs-box h3 { grid-area: title; align-self: end; margin: 0 0 .4rem }
@@ -2328,7 +2328,7 @@ html.is-loading body {
     .vs-card, .vs-no::before, .vs-ico { transition: none }
 }
 
-/* ---------- Section tags (.kicker): one style on every background ---------- */
+/* ---------- Section tags ---------- */
 .tint .kicker,
 .ix-about .kicker {
     background: #fff
@@ -2360,7 +2360,7 @@ html.is-loading body {
     }
 }
 
-/* ---------- Home: FAQ (card-style accordion, call chip, responsive) ---------- */
+/* ----------  FAQ ---------- */
 .faq-call {
     display: inline-flex;
     align-items: center;
@@ -2459,19 +2459,18 @@ html.is-loading body {
     .faq-call:hover { transform: none }
 }
 
-/* ---------- Home: Services panels, tidy stacked accordion on tablet and phone ---------- */
+/* ---------- Services panels ---------- */
 @media(max-width:860px) {
     .panels { gap: .8rem }
 
     .panel { height: 96px; border-radius: 22px }
-    /* flex:none is needed: the desktop rule .panel.active { flex: 4 } would otherwise squash the open panel to 0 height */
     .panel.active { flex: none; height: 390px }
 
-    /* collapsed: dark-to-clear sweep keeps the title readable on any photo */
+    
     .panel::after { background: linear-gradient(90deg, rgba(10, 42, 67, .88) 15%, rgba(10, 42, 67, .3)) }
     .panel.active::after { background: linear-gradient(180deg, rgba(10, 42, 67, .05) 25%, rgba(10, 42, 67, .92)) }
 
-    /* collapsed: title centred in the row; active: content sits at the bottom */
+  
     .p-in {
         inset: 0;
         display: flex;
@@ -2517,17 +2516,17 @@ html.is-loading body {
     .panel.active .p-in h3 { font-size: 1.45rem }
 }
 
-/* ---------- Home: Doctors, swipe row on tablet and phone ---------- */
+
 .dr-dots { display: none }
 
 @media(max-width:860px) {
-    /* equal-height cards with the Book button pinned to the bottom */
+    
     .dr-grid { align-items: stretch; padding-top: .4rem }
     .dr-card { display: flex; flex-direction: column }
     .dr-body { display: flex; flex-direction: column; flex: 1 }
     .dr-foot { margin-top: auto }
 
-    /* swipe indicator dots (built by main.js) */
+   
     .dr-dots {
         display: flex;
         justify-content: center;
@@ -2563,19 +2562,19 @@ html.is-loading body {
     .dr-dots button { transition: none }
 }
 
-/* ---------- Home: About, centre the text column once the layout stacks ---------- */
+
 @media(max-width:860px) {
     .sec.ix-about > div:last-child { text-align: center }
-    /* h2 has a 20ch max-width, so centre the block itself, not just its text */
+    
     .sec.ix-about h2,
     .sec.ix-about .lead { margin-inline: auto }
-    /* ticks: one centred block, icons lined up in a column, text left-aligned */
+    
     .ix-ticks { width: fit-content; max-width: 100%; margin-inline: auto; justify-items: start }
     .ix-ticks li { justify-content: flex-start; text-align: left }
     .ix-actions { justify-content: center }
 }
 
-/* ---------- Home: Hero, centre the text once the layout stacks ---------- */
+
 @media(max-width:860px) {
     .hero-text { justify-self: center; text-align: center }
     .hero h1,
@@ -2585,13 +2584,12 @@ html.is-loading body {
 }
 
 @media(max-width:520px) {
-    /* stacked ticks: one centred block with the icons lined up in a column */
+    
     .hero-points { align-items: flex-start; width: fit-content; max-width: 100%; margin-inline: auto }
 }
 .logo-img { height: 32px; width: auto; }
 .logo-img { transition: filter .3s ease; }
 
-/* The logo is teal, so it disappears on dark backgrounds: show it in white there
-   (home navbar before scroll, and the open mobile menu) */
+
 .home .nav:not(.solid) .logo-img,
 .nav.menu-open .logo-img { filter: brightness(0) invert(1); }

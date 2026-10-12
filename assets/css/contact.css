@@ -82,8 +82,6 @@ textarea {
 }
 
 .c-hero h1 .mark {
-    /* color: var(--teal);
-    background: linear-gradient(transparent 60%, rgba(111, 214, 211, .5) 60%); */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone
 }
@@ -140,13 +138,13 @@ textarea {
     margin-right: .35rem
 }
 
-/* trust strip under the CTAs */
+
 .trust {
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-between;   /* equal space between the three items */
+    justify-content: space-between;   
     gap: 1rem 1.4rem;
     margin-top: 3rem;
     padding-top: 1.6rem;
@@ -201,7 +199,7 @@ textarea {
     box-shadow: 0 30px 60px rgba(10, 42, 67, .2);
 }
 
-/* dashed frame offset behind the photo */
+
 .c-ring {
     position: absolute;
     z-index: 0;
@@ -237,7 +235,7 @@ textarea {
     color: var(--teal)
 }
 
-/* 2. Contact lines (full-width rows that fill on hover) */
+
 
 /* 2. Channel switcher */
 .pick {
@@ -688,7 +686,7 @@ legend {
 .tabs {
     display: grid;
     gap: 1rem;
-    grid-auto-rows: 1fr;      /* cards share the full height of the map */
+    grid-auto-rows: 1fr;      
     align-content: stretch
 }
 
@@ -702,7 +700,7 @@ legend {
     cursor: pointer;
     transition: .35s;
     color: var(--ink);
-    display: flex;            /* centre text vertically in the taller card */
+    display: flex;            
     flex-direction: column;
     justify-content: center
 }
@@ -736,7 +734,7 @@ legend {
     container-type: size
 }
 
-/* Behaves like object-fit: cover, but wraps the image and its hotspot so they stay aligned */
+
 .mapfit {
     position: absolute;
     left: 50%;
@@ -754,7 +752,7 @@ legend {
     display: block
 }
 
-/* Invisible link over the card baked into the map image (top-left) */
+
 .maphot {
     position: absolute;
     left: 1.1%;
@@ -991,7 +989,7 @@ legend {
     gap: 2rem;
     padding-block: clamp(4rem, 9vw, 7rem);
     color: #fff;
-    /* overlay keeps text readable; gradient is also the fallback if the photo fails to load */
+    
     background:
         linear-gradient(105deg, rgba(10, 42, 67, .92) 0%, rgba(14, 84, 98, .82) 55%, rgba(31, 160, 160, .6) 100%),
         url("../images/image-1.webp") center / cover no-repeat,
@@ -1316,8 +1314,7 @@ legend {
     .c-hero .float-card { left: -.25rem }
 }
 
-/* Trust strip: stacked rows wherever 3 columns would get cramped
-   (two-column hero between 861-1100px, and narrow screens up to 700px) */
+
 @media(min-width:861px) and (max-width:1100px),
        (max-width:700px) {
     .trust {
@@ -1376,12 +1373,12 @@ fieldset .err {
     margin-top: .5rem
 }
 
-/* Emergency banner: tablet / touch (fixed backgrounds are unreliable on iOS) */
+
 @media(max-width:860px) {
     .sos {
         background:
             linear-gradient(180deg, rgba(10, 42, 67, .92), rgba(14, 84, 98, .86)),
-            url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=70") 62% center / cover no-repeat,
+            url("../images/image-1.webp") 62% center / cover no-repeat,
             linear-gradient(135deg, var(--teal), var(--navy))
     }
 
@@ -1440,7 +1437,7 @@ fieldset .err {
         width: 20px
     }
 }
-/* ---------- Hero: centre everything when it collapses to one column ---------- */
+/* ---------- Hero ---------- */
 @media(max-width:860px) {
     .c-hero-text {
         text-align: center
@@ -1450,7 +1447,7 @@ fieldset .err {
         justify-content: center
     }
 
-    /* mirror the accent line so the tag stays visually centred */
+   
     .c-hero .eyebrow {
         justify-content: center
     }
@@ -1484,7 +1481,7 @@ fieldset .err {
     }
 }
 
-/* trust rows (stacked up to 700px): centre icon + label in each row */
+
 @media(max-width:700px) {
     .trust li {
         justify-content: center
@@ -1501,7 +1498,7 @@ fieldset .err {
     }
 }
 
-/* ---------- Emergency banner: centre everything once the layout stacks ---------- */
+/* ---------- Emergency banner ---------- */
 @media(max-width:860px) {
     .sos {
         flex-direction: column;
@@ -1513,7 +1510,7 @@ fieldset .err {
 
     .sos-text { margin-inline: auto }
 
-    /* h2 has a 20ch max-width, so centre the block itself, not just its text */
+  
     .sos h2,
     .sos .lead { margin-inline: auto }
 

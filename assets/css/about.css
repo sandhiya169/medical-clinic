@@ -1,4 +1,4 @@
-/* About page. Loads after style.css; every selector is new (ab-, tl-, crumbs) so other pages are unaffected. */
+
 
 /* ---------- 1. Hero ---------- */
 .crumbs {
@@ -99,7 +99,7 @@
     aspect-ratio: 1/1.02
 }
 
-/* Decorative fillers behind the photos (first in DOM = painted underneath) */
+
 .ab-deco {
     position: absolute;
     pointer-events: none
@@ -474,7 +474,7 @@
     margin-right: 22px
 }
 
-/* Offset outline arch behind the photo */
+
 .val-visual::before {
     content: "";
     position: absolute;
@@ -501,7 +501,7 @@
     object-fit: cover
 }
 
-/* Spinning seal on the arch edge */
+
 .val-seal {
     position: absolute;
     top: 22%;
@@ -558,7 +558,7 @@
     padding-top: 1.7rem
 }
 
-/* Connecting line from this node down to the next one */
+
 .val-item:not(:last-child)::before {
     content: "";
     position: absolute;
@@ -803,7 +803,7 @@
 }
 
 /* ---------- 6. Inside + marquee ---------- */
-/* Override the generic .sec bottom padding so there's no huge gap above the CTA */
+
 .ab-inside {
     padding-bottom: 2rem
 }
@@ -1129,7 +1129,7 @@
     }
 }
 
-/* Promise section: center the small heading above the statement */
+
 .ab-promise>.kicker {
     display: block;
     width: fit-content;
@@ -1137,7 +1137,7 @@
 }
 
 
-/* ---------- Fixed-value responsive overrides (replaces clamp()) ---------- */
+
 @media(max-width:1100px) {
     .ab-hero { gap: 2.5rem }
     .ab-hero h1 { font-size: 3.3rem }

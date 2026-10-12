@@ -3,7 +3,7 @@
 
   AOS.init({ duration: reduce ? 0 : 800, once: true, offset: 60, easing: 'ease-out-cubic' });
 
-  // Go back: return to the page the visitor came from (e.g. the contact form); fall back to home
+  
   document.getElementById('goBack').addEventListener('click', () => {
     let saved = null, internal = false;
     try {

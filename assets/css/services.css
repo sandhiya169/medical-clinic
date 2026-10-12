@@ -1,4 +1,4 @@
-/* Services page. Loads after style.css; every selector is new (sv-, crumbs) so other pages are unaffected. */
+
 
 .sr {
     position: absolute;
@@ -142,7 +142,7 @@
     font-size: .85rem
 }
 
-/* Stage wraps the directory so decoration can sit around it */
+
 .sv-stage {
     position: relative;
     justify-self: center;
@@ -154,15 +154,6 @@
     pointer-events: none
 }
 
-/* .sv-dots {
-    right: -7%;
-    top: -6%;
-    width: 34%;
-    aspect-ratio: 1;
-    background-image: radial-gradient(var(--teal) 1.6px, transparent 1.9px);
-    background-size: 16px 16px;
-    opacity: .3
-} */
 
 .sv-ring {
     left: -9%;
@@ -600,7 +591,7 @@
     color: var(--teal)
 }
 
-/* ---------- 5. How a visit works (rising steps, light to dark) ---------- */
+/* ---------- 5. How a visit works  ---------- */
 .sv-steps {
     list-style: none;
     display: grid;
@@ -629,7 +620,7 @@
     overflow: hidden
 }
 
-/* the cards get darker as the visit moves forward */
+
 .sv-step:nth-child(2) {
     --bg: var(--mint);
     --tile: #fff;
@@ -661,7 +652,7 @@
     border-color: transparent
 }
 
-/* oversized outline numeral */
+
 .sv-step-no {
     position: absolute;
     top: 1rem;
@@ -713,7 +704,7 @@
     flex: none
 }
 
-/* steps: small laptops and tablets, two by two */
+
 @media(max-width:1100px) {
     .sv-steps {
         grid-template-columns: repeat(2, 1fr);
@@ -729,7 +720,7 @@
     }
 }
 
-/* steps: phones, one column */
+
 @media(max-width:700px) {
     .sv-steps {
         grid-template-columns: 1fr;
@@ -1158,7 +1149,7 @@
 }
 
 
-/* ---------- Fixed-value responsive overrides (replaces clamp()) ---------- */
+
 @media(max-width:1100px) {
     .sv-cta-sec {
         padding: 3.7rem var(--pad) 5.5rem
@@ -1189,7 +1180,7 @@
     }
 }
 
-/* ---------- Hero: fixed-value responsive overrides ---------- */
+
 @media(max-width:1100px) {
     .sv-hero { gap: 2.5rem }
     .sv-hero h1 { font-size: 3.3rem }

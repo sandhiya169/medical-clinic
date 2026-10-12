@@ -1,4 +1,4 @@
-/* Blog page. Loads after style.css; every selector is new (bl-, crumbs) so other pages are unaffected. */
+
 
 .sr {
     position: absolute;
@@ -61,7 +61,7 @@
     font-size: .8rem
 }
 
-/* ---------- 1. Hero: photo with a floating read card (mirrors the contact hero) ---------- */
+/* ---------- 1. Hero ---------- */
 .bl-hero {
     position: relative;
     display: grid;
@@ -90,8 +90,6 @@
 }
 
 .bl-hero h1 .mark {
-    /* color: var(--teal);
-    background: linear-gradient(transparent 60%, rgba(111, 214, 211, .5) 60%); */
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone
 }
@@ -111,7 +109,7 @@
     margin-right: .35rem
 }
 
-/* small section tag above the headline */
+
 .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -136,7 +134,7 @@
     color: #7fe0e0
 }
 
-/* trust strip under the CTAs */
+
 .trust {
     list-style: none;
     display: flex;
@@ -191,7 +189,6 @@
     box-shadow: 0 30px 60px rgba(10, 42, 67, .2)
 }
 
-/* dashed frame offset behind the photo */
 .b-ring {
     position: absolute;
     z-index: 0;
@@ -206,7 +203,7 @@
     bottom: -2.5rem;
 }
 
-/* featured article floating over the photo */
+
 .float-card.b-feature {
     width: min(76%, 300px);
     gap: .45rem;
@@ -277,7 +274,7 @@
     }
 }
 
-/* Hero: small laptops, text column gets narrower */
+
 @media(max-width:1100px) {
     .bl-hero {
         gap: 2.5rem
@@ -301,7 +298,7 @@
     }
 }
 
-/* Trust strip: stacked rows wherever 3 columns get cramped (parity with the contact hero) */
+
 @media(min-width:961px) and (max-width:1100px),
        (max-width:700px) {
     .bl-hero .trust {
@@ -329,7 +326,7 @@
     }
 }
 
-/* Hero: tablet, single column, text centred like the contact hero */
+
 @media(max-width:960px) {
     .bl-hero {
         grid-template-columns: 1fr;
@@ -402,7 +399,7 @@
     }
 }
 
-/* Hero: phones, everything tightens and the floats stay on screen */
+
 @media(max-width:640px) {
     .bl-hero {
         gap: 2.2rem;
@@ -1058,7 +1055,7 @@
 }
 
 
-/* ---------- Fixed-value responsive overrides (replaces clamp()) ---------- */
+
 @media(max-width:1100px) {
     .bl-news-card {
         padding: 3.05rem
@@ -1100,18 +1097,18 @@
         padding: 2.5rem 1.5rem calc(2.5rem + 40px)
     }
 }
-/* ---------- Featured read: aligned to page gutters + enhancements ---------- */
+/* ---------- Featured read ---------- */
 .bl-feat {
     position: relative;
     isolation: isolate;
     overflow-x: clip;
-    padding-left: var(--pad);   /* same gutters as the header and other sections */
+    padding-left: var(--pad);   
     padding-right: var(--pad);
     grid-template-columns: minmax(0, 520px) minmax(0, 1fr);
     gap: 4.5rem
 }
 
-/* soft glow behind the photo */
+
 .bl-feat::before {
     content: "";
     position: absolute;
@@ -1128,13 +1125,12 @@
 }
 
 .bl-feat-img {
-    justify-self: start;        /* photo now starts on the page gutter, not floating mid-column */
-    width: 100%;
+    justify-self: start;        
     max-width: 520px;
     aspect-ratio: 1 / 1.05
 }
 
-/* let the text use the whole right column instead of stopping short */
+
 .bl-feat-text {
     min-width: 0
 }
@@ -1197,7 +1193,7 @@
         gap: 2rem
     }
 
-    /* stacked: photo spans the gutters and is shorter so the text stays in view */
+   
     .bl-feat-img {
         justify-self: stretch;
         max-width: none;
@@ -1273,7 +1269,7 @@
     animation-play-state: paused
 }
 
-/* arrows and progress bar make no sense on a marquee; keep only pause/play */
+
 .bl-quick.mq .bl-arrows button:not(.bl-play),
 .bl-quick.mq .bl-bar {
     display: none
@@ -1295,7 +1291,7 @@
     }
 }
 
-/* ---------- Section tags (.kicker) on every background ---------- */
+/* ---------- Section tags  ---------- */
 .tint .kicker {
     background: #fff
 }
@@ -1315,15 +1311,13 @@
     margin-bottom: 1rem
 }
 
-/* ---------- Blog: topic chips, make the row scroll all the way on phones ---------- */
+/* ---------- Blog---------- */
 @media(max-width:640px) {
-    /* the base rule has flex-wrap: wrap, which lets a column container grow as wide as the whole chip row,
-       so the row never overflowed inside its own box and the last chips could not be reached */
+    
     .bl-tools { flex-wrap: nowrap; min-width: 0 }
 
     .bl-filters {
         min-width: 0;
-        /* run edge to edge so chips slide under the screen edge, with the page gutter kept at both ends */
         margin-inline: calc(var(--pad) * -1);
         padding: .2rem var(--pad) .5rem;
         scroll-padding-inline: var(--pad);

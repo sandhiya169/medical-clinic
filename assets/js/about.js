@@ -19,7 +19,7 @@
       if (id.length > 1 && $(id) && lenis) { e.preventDefault(); lenis.scrollTo(id, { offset: -70 }); closeMenu(); }
     }));
 
-  // AOS (one-shot reveals). Fallbacks: no library = show everything; slow start = IntersectionObserver reveal
+  
   if (window.AOS) {
     AOS.init({ duration: reduce ? 0 : 800, once: true, offset: 80, easing: 'ease-out-cubic' });
     addEventListener('load', () => AOS.refresh());

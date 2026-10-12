@@ -1,4 +1,4 @@
-/* Dashboards: builds on tokens and components in style.css */
+
 .d-body {
     background: var(--mint)
 }
@@ -31,7 +31,7 @@
     padding: 0 .5rem
 }
 
-/* Teal logo on the navy sidebar is hard to see: render it white */
+
 .d-side .logo-img {
     filter: brightness(0) invert(1)
 }
@@ -897,7 +897,7 @@ a.chip:hover {
 }
 
 
-/* ---------- Fixed-value responsive overrides (replaces clamp()) ---------- */
+
 @media(max-width:1100px) {
     .d-top { padding: .8rem 1.85rem }
     .d-content { padding: 1.85rem }
@@ -923,7 +923,7 @@ a.chip:hover {
 }
 
 
-/* ---------- Right rail: two extra sections beside each view ---------- */
+
 .d-split {
     grid-column: 1/-1;
     display: grid;
@@ -948,7 +948,7 @@ a.chip:hover {
     min-width: 0
 }
 
-/* When the main column is narrow, its cards stack instead of splitting 7/5 or 8/4 */
+
 @container dg (max-width: 759px) {
     .c4, .c5, .c7, .c8 { grid-column: 1/-1 }
 }
@@ -1081,7 +1081,7 @@ a.chip:hover {
 
 .d-drop .btn { margin-top: .5rem }
 
-/* Rail placement: beside the content on wide screens, below it on tablet, single column on phones */
+
 @media(max-width:1199px) {
     .d-split { grid-template-columns: minmax(0, 1fr) }
     .d-rail { grid-template-columns: repeat(2, minmax(0, 1fr)) }
@@ -1095,7 +1095,7 @@ a.chip:hover {
     .d-split, .d-grid, .d-rail { gap: 1rem }
 }
 
-/* Signed-in email inside the sidebar (shown only when the drawer is used) */
+
 .d-side-mail {
     display: none;
     align-items: center;

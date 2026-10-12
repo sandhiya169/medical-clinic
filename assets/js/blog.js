@@ -105,20 +105,18 @@
   strip.addEventListener('scroll', prog, { passive: true });
   addEventListener('resize', prog); prog();
 
-  // Marquee: cards glide across continuously and loop seamlessly.
-  // Pauses on hover / focus / touch, when off-screen, and with the pause button.
-  // Reduced-motion visitors keep the normal swipe/arrow strip instead.
+  
   const play = $('#play'), playIcon = play.querySelector('i'), sec = $('#quick');
   if (reduce) {
     play.hidden = true;
   } else {
-    const SPEED = 45;                                  // pixels per second
+    const SPEED = 45;                                 
     const cardsList = [...strip.children];
     const track = document.createElement('div');
     track.className = 'bl-mq-track';
     cardsList.forEach(c => track.appendChild(c));
     strip.appendChild(track);
-    // repeat the set until one half is wider than the screen, then duplicate that half for the loop
+    
     const setW = track.scrollWidth || 1;
     const reps = Math.max(1, Math.ceil(Math.max(innerWidth, screen.width) / setW));
     const half = [];
@@ -157,8 +155,8 @@
     em.classList.toggle('bad', !ok);
     if (!ok) { nm.style.color = '#c0392b'; nm.textContent = 'Please enter a valid email address.'; return; }
     nm.style.color = ''; nm.textContent = '';
-    nf.reset();                         // clear the fields
-    window.location.href = '404.html';  // redirect to the 404 page
+    nf.reset();                         
+    window.location.href = '404.html';  
   });
   // If the user comes back with the Back button, make sure the form is clean
   addEventListener('pageshow', () => { nf.reset(); nm.textContent = ''; nf.email.classList.remove('bad'); });
